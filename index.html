@@ -1,0 +1,1691 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VELOIRE PARIS | Haute Parfumerie</title>
+  <!-- Google Fonts: Cormorant Garamond, Plus Jakarta Sans, Readex Pro -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Readex+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            alabaster: '#FAF9F6',
+            pearl: '#F3F1EC',
+            obsidian: '#111111',
+            charcoal: '#2B2927',
+            champagne: '#C5A059',
+            champagneLight: '#E6D3A7',
+            champagneDark: '#9A7832',
+            stoneLux: '#76716B'
+          },
+          fontFamily: {
+            serifLux: ['"Cormorant Garamond"', 'serif'],
+            sansLux: ['"Plus Jakarta Sans"', '"Readex Pro"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    :root {
+      --gold: #C5A059;
+      --obsidian: #111111;
+    }
+
+    body {
+      background-color: #FAF9F6;
+      color: #111111;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    /* Architectural Alabaster & Silk Aura */
+    .atelier-bg {
+      background:
+        radial-gradient(circle at 12% 18%, rgba(197, 160, 89, 0.09) 0%, transparent 42%),
+        radial-gradient(circle at 88% 78%, rgba(197, 160, 89, 0.08) 0%, transparent 48%),
+        linear-gradient(180deg, #FFFFFF 0%, #FAF9F6 55%, #F3F1EC 100%);
+    }
+
+    /* Floating 3D Motion */
+    @keyframes floatSculpture {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-14px) rotate(0.8deg); }
+    }
+    .animate-float {
+      animation: floatSculpture 6.5s ease-in-out infinite;
+    }
+
+    /* Perfume Mist Particles */
+    @keyframes mistRise {
+      0% { opacity: 0; transform: translateY(10px) scale(0.6); }
+      40% { opacity: 0.65; }
+      100% { opacity: 0; transform: translateY(-45px) scale(1.5); }
+    }
+    .mist-particle {
+      animation: mistRise 3.2s infinite ease-out;
+    }
+
+    /* Luxury Button Shimmer */
+    @keyframes shimmerSweep {
+      0% { transform: translateX(-160%) skewX(-22deg); }
+      100% { transform: translateX(260%) skewX(-22deg); }
+    }
+    .shimmer-btn {
+      position: relative;
+      overflow: hidden;
+    }
+    .shimmer-btn::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 42%;
+      height: 100%;
+      background: linear-gradient(to right, transparent, rgba(255,255,255,0.45), transparent);
+      transform: translateX(-160%) skewX(-22deg);
+      animation: shimmerSweep 4.5s infinite;
+    }
+
+    /* Infinite Marquee */
+    @keyframes marqueeScroll {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marqueeScroll 34s linear infinite;
+    }
+
+    /* Ultra-Clean Luxury Product Card */
+    .lux-card {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(197, 160, 89, 0.22);
+      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .lux-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(197, 160, 89, 0.8);
+      box-shadow: 0 26px 50px -15px rgba(17, 17, 17, 0.08), 0 0 25px -5px rgba(197, 160, 89, 0.16);
+    }
+
+    .flacon-svg {
+      filter: drop-shadow(0 20px 24px rgba(17, 17, 17, 0.13));
+      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .lux-card:hover .flacon-svg {
+      transform: scale(1.05) translateY(-4px);
+    }
+
+    .gold-foil {
+      background: linear-gradient(135deg, #9A7832 0%, #C5A059 48%, #7E5E1E 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #FAF9F6; }
+    ::-webkit-scrollbar-thumb { background: #D5C5A8; border-radius: 9999px; }
+  </style>
+</head>
+<body class="font-sansLux antialiased selection:bg-champagne selection:text-white">
+
+  <!-- 1. TOP URGENCY BAR (SELECTIVE ARCHIVE OFFERS + 24H FREE EXPRESS SHIPPING) -->
+  <div class="bg-obsidian text-white text-[11px] border-b border-champagne/30 relative z-50">
+    <div class="max-w-7xl mx-auto px-4 py-2.5 flex flex-col md:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-2.5 flex-wrap justify-center">
+        <span class="bg-champagne text-obsidian font-extrabold px-2.5 py-0.5 rounded-full text-[9px] uppercase tracking-[0.18em]">PRIVÉE OFFERS</span>
+        <span id="urg-text-1" class="text-gray-200 font-medium tracking-wide">LIMITED 48H PRIVILEGE ON SELECTED EXTRAITS — ENDS IN:</span>
+        <div class="font-mono font-bold text-champagneLight bg-white/10 px-2.5 py-0.5 rounded-full border border-champagne/30">
+          <span id="sale-hr">47</span>h : <span id="sale-min">54</span>m : <span id="sale-sec">19</span>s
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2 justify-center">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+        <span id="urg-text-2" class="text-champagneLight font-semibold tracking-wide">COMPLIMENTARY EXPRESS SHIPPING TODAY:</span>
+        <span class="font-mono text-white font-bold bg-emerald-950/90 border border-emerald-500/40 px-2.5 py-0.5 rounded-full">
+          <span id="ship-hr">09</span>:<span id="ship-min">38</span>:<span id="ship-sec">44</span>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. STICKY HAUTE PARFUMERIE HEADER -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-xl border-b border-champagne/25">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-3">
+      
+      <!-- Left Navigation -->
+      <nav class="hidden xl:flex items-center gap-7 text-[11px] uppercase tracking-[0.2em] font-semibold text-charcoal">
+        <a href="#catalog-section" onclick="setCategory('all')" class="hover:text-champagne transition" data-i18n="nav_collection">Master Collection</a>
+        <a href="#catalog-section" onclick="setCategory('offers')" class="text-champagneDark hover:text-obsidian transition flex items-center gap-1.5">
+          <span>🔥</span>
+          <span data-i18n="nav_offers">Selected Offers</span>
+        </a>
+        <a href="#scent-finder" class="hover:text-champagne transition" data-i18n="nav_finder">Olfactory Notes</a>
+        <button onclick="openQuizModal()" class="hover:text-champagne transition uppercase tracking-[0.2em]" data-i18n="nav_quiz">Scent Quiz</button>
+      </nav>
+
+      <!-- Center Maison Logo -->
+      <a href="#" class="text-center group">
+        <div class="font-serifLux text-3xl sm:text-4xl font-bold tracking-[0.26em] text-obsidian group-hover:text-champagne transition">
+          VELOIRE
+        </div>
+        <div class="text-[8.5px] uppercase tracking-[0.42em] text-stoneLux -mt-1 font-semibold">
+          PARIS • HAUTE PARFUMERIE
+        </div>
+      </a>
+
+      <!-- Right Controls: Search, Admin Atelier, EN/AR Switcher, Bag -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        
+        <!-- Search Trigger -->
+        <a href="#catalog-section" onclick="setTimeout(()=>document.getElementById('live-search-input').focus(),250)" class="p-2.5 rounded-full hover:bg-pearl text-obsidian transition" title="Search Encyclopedia">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/>
+          </svg>
+        </a>
+
+        <!-- ATELIER ADMIN DASHBOARD BUTTON -->
+        <button onclick="openAdminModal()" class="px-3.5 py-1.5 rounded-full border border-obsidian/20 bg-pearl hover:bg-obsidian hover:text-white transition text-[11px] font-bold tracking-wider flex items-center gap-1.5">
+          <span>⚙️</span>
+          <span class="hidden md:inline" data-i18n="admin_btn">Atelier Admin</span>
+        </button>
+
+        <!-- BILINGUAL TOGGLE (EN / العربية) -->
+        <button onclick="toggleLanguage()" class="px-3.5 py-1.5 rounded-full border border-champagne/60 bg-alabaster hover:bg-champagne hover:text-white transition text-xs font-bold tracking-wider shadow-sm">
+          <span id="lang-btn-label">العربية</span>
+        </button>
+
+        <!-- Shopping Bag Trigger -->
+        <button onclick="openCartDrawer()" class="px-4 py-2 rounded-full bg-obsidian text-white hover:bg-champagne transition flex items-center gap-2 shadow-md">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25c-.669 0-1.188-.578-1.118-1.243l1.263-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007z"/>
+          </svg>
+          <span class="text-xs font-semibold hidden sm:inline" data-i18n="bag_btn">Bag</span>
+          <span id="header-cart-count" class="bg-champagne text-obsidian text-[11px] font-extrabold w-5 h-5 rounded-full flex items-center justify-center">0</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- 3. ULTRA-LUXURY WHITE & CHAMPAGNE INTERACTIVE HERO -->
+  <section class="atelier-bg relative overflow-hidden pt-10 pb-20 lg:py-24 border-b border-champagne/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Column: High-Fashion Editorial -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-start">
+          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white border border-champagne/40 shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-champagne animate-ping"></span>
+            <span class="text-[10px] uppercase tracking-[0.24em] font-bold text-champagneDark" data-i18n="hero_badge">
+              GRASSE EXTRACTS • 6 BESPOKE VOLUMES (5ML TO 150ML+)
+            </span>
+          </div>
+
+          <h1 class="font-serifLux text-5xl sm:text-6xl lg:text-7xl font-semibold text-obsidian leading-[1.06] tracking-tight" data-i18n="hero_title">
+            Sculpted in Light. <span class="italic font-normal gold-foil">Worn Like Gold.</span>
+          </h1>
+
+          <p class="text-stoneLux text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed" data-i18n="hero_subtitle">
+            Discover our world encyclopedia of 35% pure Extrait de Parfum creations. Choose your exact flacon volume—from 5ml discovery atomizers to 150ml+ haute crystal magnums—with complimentary bottle engraving and express doorstep delivery.
+          </p>
+
+          <!-- CTAs -->
+          <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+            <a href="#catalog-section" class="w-full sm:w-auto px-9 py-4 rounded-full bg-obsidian text-white font-bold text-xs uppercase tracking-[0.2em] hover:bg-champagne transition-all shadow-xl shimmer-btn text-center" data-i18n="hero_cta_primary">
+              Explore The Fragrance Archive
+            </a>
+            <button onclick="openQuizModal()" class="w-full sm:w-auto px-8 py-4 rounded-full bg-white border border-champagne/60 text-obsidian font-bold text-xs uppercase tracking-[0.18em] hover:border-obsidian transition text-center flex items-center justify-center gap-2">
+              <span>✦</span>
+              <span data-i18n="hero_cta_quiz">Take 30s Scent Quiz</span>
+            </button>
+          </div>
+
+          <!-- Luxury Pillars Bar -->
+          <div class="pt-8 grid grid-cols-3 gap-4 border-t border-champagne/25 max-w-xl mx-auto lg:mx-0">
+            <div>
+              <div class="font-serifLux text-2xl sm:text-3xl font-bold text-obsidian">5ml – 150ml+</div>
+              <div class="text-[11px] uppercase tracking-wider text-stoneLux" data-i18n="stat_1">6 Bespoke Flacon Sizes</div>
+            </div>
+            <div>
+              <div class="font-serifLux text-2xl sm:text-3xl font-bold text-obsidian">35% Extrait</div>
+              <div class="text-[11px] uppercase tracking-wider text-stoneLux" data-i18n="stat_2">+48H Royal Sillage</div>
+            </div>
+            <div>
+              <div class="font-serifLux text-2xl sm:text-3xl font-bold text-champagneDark" data-i18n="stat_3_val">FREE</div>
+              <div class="text-[11px] uppercase tracking-wider text-stoneLux" data-i18n="stat_3">Engraving & Samples</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Floating Flacon Studio with Live Size Morphing -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative w-full max-w-md rounded-[38px] bg-white/90 backdrop-blur-xl border border-champagne/40 shadow-2xl p-7 flex flex-col justify-between items-center">
+            
+            <!-- Top Status Pill -->
+            <div class="w-full flex justify-between items-center">
+              <span class="px-3.5 py-1 rounded-full bg-obsidian text-champagneLight font-bold tracking-widest uppercase text-[10px]" data-i18n="hero_bottle_tag">Interactive Flacon Studio</span>
+              <span id="hero-size-badge" class="px-3 py-1 rounded-full bg-pearl text-obsidian border border-champagne/40 font-bold text-[11px]">100 ml • 3.4 oz</span>
+            </div>
+
+            <!-- Animated Mist Particles + Dynamic SVG Flacon -->
+            <div class="relative my-6 h-64 flex items-center justify-center w-full">
+              <div class="absolute top-2 w-3 h-3 rounded-full bg-champagne/40 blur-sm mist-particle"></div>
+              <div class="absolute top-6 left-1/3 w-2 h-2 rounded-full bg-champagne/30 blur-sm mist-particle" style="animation-delay:1s"></div>
+              <div class="absolute top-4 right-1/3 w-2.5 h-2.5 rounded-full bg-champagne/40 blur-sm mist-particle" style="animation-delay:1.8s"></div>
+
+              <div id="hero-interactive-flacon" class="animate-float cursor-pointer" onclick="openQuickView(1)">
+                <!-- Dynamic SVG injected via JS -->
+              </div>
+            </div>
+
+            <!-- Interactive Live Volume Morphing Selector on Hero -->
+            <div class="w-full space-y-3">
+              <div class="flex justify-between items-center text-[11px] text-stoneLux font-semibold uppercase tracking-wider">
+                <span data-i18n="try_size_morph">Tap volume to morph flacon:</span>
+                <span id="hero-size-use" class="text-champagneDark font-bold">Signature Flacon</span>
+              </div>
+              <div class="grid grid-cols-6 gap-1.5" id="hero-size-buttons">
+                <button onclick="setHeroSize(5)" data-sz="5" class="hero-sz-btn py-2 rounded-xl border border-champagne/30 bg-alabaster text-[11px] font-bold text-charcoal hover:border-obsidian transition">5ml</button>
+                <button onclick="setHeroSize(10)" data-sz="10" class="hero-sz-btn py-2 rounded-xl border border-champagne/30 bg-alabaster text-[11px] font-bold text-charcoal hover:border-obsidian transition">10ml</button>
+                <button onclick="setHeroSize(30)" data-sz="30" class="hero-sz-btn py-2 rounded-xl border border-champagne/30 bg-alabaster text-[11px] font-bold text-charcoal hover:border-obsidian transition">30ml</button>
+                <button onclick="setHeroSize(50)" data-sz="50" class="hero-sz-btn py-2 rounded-xl border border-champagne/30 bg-alabaster text-[11px] font-bold text-charcoal hover:border-obsidian transition">50ml</button>
+                <button onclick="setHeroSize(100)" data-sz="100" class="hero-sz-btn py-2 rounded-xl border border-obsidian bg-obsidian text-white text-[11px] font-bold transition shadow">100ml</button>
+                <button onclick="setHeroSize(150)" data-sz="150" class="hero-sz-btn py-2 rounded-xl border border-champagne/30 bg-alabaster text-[11px] font-bold text-charcoal hover:border-obsidian transition">150ml</button>
+              </div>
+
+              <!-- Hero Featured Buy Bar -->
+              <div class="pt-3 border-t border-champagne/25 flex items-center justify-between">
+                <div>
+                  <h3 class="font-serifLux text-2xl font-bold text-obsidian">Oud Blanc Impérial</h3>
+                  <div class="flex items-center gap-2">
+                    <span id="hero-live-price" class="text-base font-extrabold text-obsidian">1,350 EGP</span>
+                    <span id="hero-old-price" class="text-xs line-through text-stoneLux">1,800 EGP</span>
+                  </div>
+                </div>
+                <button onclick="addHeroPerfumeToCart()" class="px-6 py-3 rounded-full bg-obsidian text-white text-xs font-bold uppercase tracking-wider hover:bg-champagne transition shadow-lg">
+                  + <span data-i18n="add_bag_btn">Add to Bag</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. LUXURY RIBBON MARQUEE -->
+  <div class="bg-pearl border-b border-champagne/25 py-3.5 overflow-hidden select-none" dir="ltr">
+    <div class="marquee-track flex items-center gap-12 text-[11px] uppercase tracking-[0.26em] font-semibold text-charcoal">
+      <span>✦ BESPOKE VOLUMES: 5ML SAMPLE • 10ML TRAVEL • 30ML • 50ML • 100ML • 150ML+ MAGNUM</span>
+      <span>✦ COMPLIMENTARY GOLD BOTTLE ENGRAVING</span>
+      <span>✦ TRY BEFORE YOU PAY WITH 2 FREE SAMPLE VIALS</span>
+      <span>✦ CASH ON DELIVERY & INSTANT WHATSAPP CONFIRMATION</span>
+      <span>✦ BESPOKE VOLUMES: 5ML SAMPLE • 10ML TRAVEL • 30ML • 50ML • 100ML • 150ML+ MAGNUM</span>
+      <span>✦ COMPLIMENTARY GOLD BOTTLE ENGRAVING</span>
+    </div>
+  </div>
+
+  <!-- 5. OLFACTORY SCENT FINDER PILLS -->
+  <section id="scent-finder" class="py-12 bg-white border-b border-champagne/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-7">
+        <span class="text-[10px] uppercase tracking-[0.28em] text-champagneDark font-bold block mb-1" data-i18n="finder_kicker">Olfactory Ingredient Matrix</span>
+        <h2 class="font-serifLux text-3xl sm:text-4xl font-bold text-obsidian" data-i18n="finder_title">Search by Raw Perfume Note</h2>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-center gap-2.5" id="note-pills-container">
+        <button onclick="filterByNote('')" class="note-pill px-5 py-2.5 rounded-full border border-obsidian bg-obsidian text-white text-xs font-semibold tracking-wider transition">
+          ✦ <span data-i18n="note_all">All Notes</span>
+        </button>
+        <button onclick="filterByNote('Oud')" class="note-pill px-5 py-2.5 rounded-full border border-champagne/40 bg-alabaster hover:border-obsidian text-charcoal text-xs font-semibold tracking-wider transition">
+          🪵 <span data-i18n="note_oud">Royal & White Oud</span>
+        </button>
+        <button onclick="filterByNote('Vanilla')" class="note-pill px-5 py-2.5 rounded-full border border-champagne/40 bg-alabaster hover:border-obsidian text-charcoal text-xs font-semibold tracking-wider transition">
+          🍦 <span data-i18n="note_vanilla">Madagascar Vanilla</span>
+        </button>
+        <button onclick="filterByNote('Bergamot')" class="note-pill px-5 py-2.5 rounded-full border border-champagne/40 bg-alabaster hover:border-obsidian text-charcoal text-xs font-semibold tracking-wider transition">
+          🍋 <span data-i18n="note_bergamot">Calabrian Bergamot</span>
+        </button>
+        <button onclick="filterByNote('Rose')" class="note-pill px-5 py-2.5 rounded-full border border-champagne/40 bg-alabaster hover:border-obsidian text-charcoal text-xs font-semibold tracking-wider transition">
+          🌹 <span data-i18n="note_rose">Damask Rose</span>
+        </button>
+        <button onclick="filterByNote('Amber')" class="note-pill px-5 py-2.5 rounded-full border border-champagne/40 bg-alabaster hover:border-obsidian text-charcoal text-xs font-semibold tracking-wider transition">
+          🔥 <span data-i18n="note_amber">Amber & Labdanum</span>
+        </button>
+        <button onclick="filterByNote('Musk')" class="note-pill px-5 py-2.5 rounded-full border border-champagne/40 bg-alabaster hover:border-obsidian text-charcoal text-xs font-semibold tracking-wider transition">
+          ☁️ <span data-i18n="note_musk">Velvet White Musk</span>
+        </button>
+        <button onclick="filterByNote('Leather')" class="note-pill px-5 py-2.5 rounded-full border border-champagne/40 bg-alabaster hover:border-obsidian text-charcoal text-xs font-semibold tracking-wider transition">
+          🐎 <span data-i18n="note_leather">Suede Leather & Saffron</span>
+        </button>
+        <button onclick="filterByNote('Sandalwood')" class="note-pill px-5 py-2.5 rounded-full border border-champagne/40 bg-alabaster hover:border-obsidian text-charcoal text-xs font-semibold tracking-wider transition">
+          🌿 <span data-i18n="note_sandalwood">Mysore Sandalwood</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. MASTER GLOBAL FRAGRANCE CATALOG (WITH SELECTIVE OFFERS & 6-SIZE MORPHING CARDS) -->
+  <section id="catalog-section" class="py-16 lg:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Header & Search Bar -->
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-10 gap-6">
+      <div>
+        <span class="text-xs uppercase tracking-[0.25em] text-champagneDark font-bold block mb-1" data-i18n="cat_kicker">Global Fragrance Encyclopedia</span>
+        <h2 class="font-serifLux text-4xl sm:text-5xl font-bold text-obsidian" data-i18n="cat_title">The Haute Parfumerie Archive</h2>
+      </div>
+
+      <!-- Instant Search + Sort -->
+      <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full lg:w-auto">
+        <div class="relative flex-1 sm:w-80">
+          <input 
+            id="live-search-input" 
+            type="text" 
+            oninput="handleSearchAndFilter()" 
+            placeholder="Search perfume name, note, or vibe..." 
+            class="w-full pl-10 pr-9 py-3 rounded-full bg-white border border-champagne/50 text-sm text-obsidian focus:outline-none focus:border-obsidian shadow-sm"
+          >
+          <svg class="w-4 h-4 text-stoneLux absolute left-3.5 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+          <button id="clear-search-btn" onclick="clearSearchFilters()" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-xs text-stoneLux hover:text-obsidian font-bold">✕</button>
+        </div>
+
+        <select id="sort-select" onchange="handleSearchAndFilter()" class="px-4 py-3 rounded-full bg-white border border-champagne/50 text-xs font-semibold uppercase tracking-wider text-obsidian focus:outline-none cursor-pointer shadow-sm">
+          <option value="featured" data-i18n="sort_featured">Featured Archive</option>
+          <option value="offers" data-i18n="sort_offers">Special Offers First</option>
+          <option value="price-low" data-i18n="sort_low">Price: Low to High</option>
+          <option value="price-high" data-i18n="sort_high">Price: High to Low</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Category & Selective Offer Filter Tabs -->
+    <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-8 no-scrollbar border-b border-champagne/25">
+      <button onclick="setCategory('all')" data-cat="all" class="cat-tab px-5 py-2.5 rounded-full bg-obsidian text-white text-xs font-bold uppercase tracking-wider shrink-0 transition">
+        <span data-i18n="tab_all">All Creations</span>
+      </button>
+      <button onclick="setCategory('offers')" data-cat="offers" class="cat-tab px-5 py-2.5 rounded-full bg-amber-50 border border-champagne text-champagneDark hover:bg-champagne hover:text-white text-xs font-extrabold uppercase tracking-wider shrink-0 transition">
+        🔥 <span data-i18n="tab_offers">Selected Flash Offers Only</span>
+      </button>
+      <button onclick="setCategory('bestseller')" data-cat="bestseller" class="cat-tab px-5 py-2.5 rounded-full bg-white border border-champagne/30 text-charcoal hover:border-obsidian text-xs font-bold uppercase tracking-wider shrink-0 transition">
+        ★ <span data-i18n="tab_best">Best Sellers</span>
+      </button>
+      <button onclick="setCategory('woody')" data-cat="woody" class="cat-tab px-5 py-2.5 rounded-full bg-white border border-champagne/30 text-charcoal hover:border-obsidian text-xs font-bold uppercase tracking-wider shrink-0 transition">
+        <span data-i18n="tab_woody">Woody & Oud</span>
+      </button>
+      <button onclick="setCategory('amber')" data-cat="amber" class="cat-tab px-5 py-2.5 rounded-full bg-white border border-champagne/30 text-charcoal hover:border-obsidian text-xs font-bold uppercase tracking-wider shrink-0 transition">
+        <span data-i18n="tab_amber">Amber & Gourmand</span>
+      </button>
+      <button onclick="setCategory('fresh')" data-cat="fresh" class="cat-tab px-5 py-2.5 rounded-full bg-white border border-champagne/30 text-charcoal hover:border-obsidian text-xs font-bold uppercase tracking-wider shrink-0 transition">
+        <span data-i18n="tab_fresh">Fresh & Citrus</span>
+      </button>
+      <button onclick="setCategory('floral')" data-cat="floral" class="cat-tab px-5 py-2.5 rounded-full bg-white border border-champagne/30 text-charcoal hover:border-obsidian text-xs font-bold uppercase tracking-wider shrink-0 transition">
+        <span data-i18n="tab_floral">Floral & Musk</span>
+      </button>
+    </div>
+
+    <!-- Counter & Admin Shortcut -->
+    <div class="flex flex-wrap items-center justify-between mb-6 text-xs text-stoneLux gap-2">
+      <span id="results-counter">Showing 16 handcrafted extraits</span>
+      <div class="flex items-center gap-4">
+        <button onclick="openAdminModal()" class="text-champagneDark font-bold hover:underline">+ Add or Edit Perfumes / Offers (Admin)</button>
+        <button onclick="clearSearchFilters()" class="underline hover:text-obsidian font-semibold" data-i18n="reset_filters">Reset filters</button>
+      </div>
+    </div>
+
+    <!-- Product Grid -->
+    <div id="catalog-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-7"></div>
+
+    <!-- Empty Search State -->
+    <div id="no-results-box" class="hidden text-center py-16 bg-white rounded-3xl border border-champagne/30 my-6 p-8">
+      <div class="font-serifLux text-3xl text-obsidian mb-2" data-i18n="no_res_title">No matching creation found</div>
+      <p class="text-sm text-stoneLux mb-6" data-i18n="no_res_sub">Try searching for another note or reset filters to explore all creations.</p>
+      <button onclick="clearSearchFilters()" class="px-7 py-3 rounded-full bg-obsidian text-white text-xs font-bold uppercase tracking-widest hover:bg-champagne transition">
+        Show Complete Archive
+      </button>
+    </div>
+  </section>
+
+  <!-- 7. BESPOKE ROYAL COFFRET BUNDLE SECTION -->
+  <section class="py-16 bg-gradient-to-r from-pearl via-white to-pearl border-y border-champagne/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-[36px] border border-champagne/50 shadow-2xl p-8 sm:p-12 lg:p-14 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-7 space-y-5">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-50 border border-champagne text-champagneDark text-xs font-bold uppercase tracking-widest">
+            ★ <span data-i18n="bundle_tag">COLLECTOR COFFRET PRIVILEGE</span>
+          </div>
+          <h2 class="font-serifLux text-4xl sm:text-5xl font-bold text-obsidian leading-tight" data-i18n="bundle_title">
+            The Royal Duo Coffret (2x 100ml) + 5 Free Discovery Atomizers
+          </h2>
+          <p class="text-stoneLux text-sm sm:text-base leading-relaxed" data-i18n="bundle_desc">
+            Acquire both of our signature 100ml creations—Oud Blanc Impérial & Velours de Vanille—housed in a white lacquered presentation box with 5x 5ml travel samples and complimentary express delivery.
+          </p>
+          <div class="flex flex-wrap items-baseline gap-4 pt-1">
+            <span class="font-serifLux text-4xl font-bold text-obsidian">2,250 EGP</span>
+            <span class="text-lg line-through text-stoneLux">3,200 EGP</span>
+            <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-900 text-xs font-extrabold">SAVE 950 EGP + FREE SHIPPING</span>
+          </div>
+          <div class="pt-2">
+            <button onclick="addBundleToCart()" class="px-9 py-4 rounded-full bg-obsidian text-white font-bold text-xs uppercase tracking-[0.2em] hover:bg-champagne transition shadow-xl shimmer-btn" data-i18n="bundle_cta">
+              Acquire The Royal Duo Coffret
+            </button>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 flex items-center justify-center gap-4 bg-alabaster p-8 rounded-3xl border border-champagne/30">
+          <div id="bundle-visual-1"></div>
+          <div class="text-2xl font-serifLux font-bold text-champagne">+</div>
+          <div id="bundle-visual-2"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. SLIDE-OVER SHOPPING BAG DRAWER -->
+  <div id="cart-backdrop" onclick="closeCartDrawer()" class="fixed inset-0 bg-obsidian/50 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+  <aside id="cart-drawer" class="fixed top-0 bottom-0 right-0 w-full sm:w-[450px] bg-white z-50 shadow-2xl border-l border-champagne/30 flex flex-col justify-between transform translate-x-full transition-transform duration-300">
+    <div class="p-6 border-b border-champagne/25 flex items-center justify-between">
+      <div>
+        <h3 class="font-serifLux text-2xl font-bold text-obsidian" data-i18n="cart_title">Your Shopping Bag</h3>
+        <p class="text-[11px] text-emerald-700 font-semibold mt-0.5" data-i18n="cart_free_ship_note">✓ Complimentary Express Shipping + 2 Free Sample Vials</p>
+      </div>
+      <button onclick="closeCartDrawer()" class="p-2 rounded-full hover:bg-alabaster text-charcoal font-bold">✕</button>
+    </div>
+
+    <div id="cart-items-list" class="p-6 overflow-y-auto flex-1 space-y-4"></div>
+
+    <div class="p-6 bg-alabaster border-t border-champagne/30 space-y-4">
+      <div class="bg-white p-3 rounded-2xl border border-champagne/30">
+        <div class="text-[11px] font-bold uppercase tracking-wider text-champagneDark mb-1.5" data-i18n="free_sample_label">🎁 Select 2 Free 2ml Discovery Vials:</div>
+        <select id="free-sample-select" class="w-full text-xs bg-alabaster border border-champagne/30 rounded-lg px-2.5 py-2 text-obsidian font-medium focus:outline-none">
+          <option value="Oud Blanc + Baccarat Elixir">Oud Blanc + Rouge Baccarat Elixir (2x 2ml Free)</option>
+          <option value="Santal 33 + Velours Vanille">Santal Crème 33 + Velours Vanille (2x 2ml Free)</option>
+          <option value="Neroli Riviera + Rose de Soie">Néroli Riviera + Rose de Soie (2x 2ml Free)</option>
+        </select>
+      </div>
+
+      <div class="space-y-1.5 text-xs">
+        <div class="flex justify-between text-emerald-700 font-semibold">
+          <span data-i18n="shipping_lbl">24H Express Courier</span>
+          <span>FREE (0 EGP)</span>
+        </div>
+        <div class="flex justify-between text-base font-bold text-obsidian pt-2 border-t border-champagne/25">
+          <span data-i18n="total_lbl">Total</span>
+          <span id="cart-total" class="font-serifLux text-2xl">0 EGP</span>
+        </div>
+      </div>
+
+      <button onclick="openCheckoutModal()" class="w-full py-4 rounded-full bg-obsidian text-white font-bold text-xs uppercase tracking-[0.2em] hover:bg-champagne transition shadow-xl shimmer-btn" data-i18n="checkout_btn">
+        Proceed to Checkout & Delivery
+      </button>
+    </div>
+  </aside>
+
+  <!-- 9. BESPOKE PRODUCT DETAIL & VOLUME MORPHING MODAL (WITH FREE ENGRAVING) -->
+  <div id="quickview-modal" class="fixed inset-0 bg-obsidian/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300 overflow-y-auto">
+    <div id="quickview-content" class="bg-white border border-champagne/40 rounded-[34px] max-w-3xl w-full p-6 sm:p-10 shadow-2xl relative my-8"></div>
+  </div>
+
+  <!-- 10. INTERACTIVE 3-STEP SCENT FINDER QUIZ MODAL -->
+  <div id="quiz-modal" class="fixed inset-0 bg-obsidian/65 backdrop-blur-md z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+    <div class="bg-white border border-champagne/50 rounded-[34px] max-w-xl w-full p-7 sm:p-10 shadow-2xl relative">
+      <button onclick="closeQuizModal()" class="absolute top-6 right-6 w-9 h-9 rounded-full bg-alabaster hover:bg-obsidian hover:text-white transition font-bold">✕</button>
+      <span class="text-[10px] uppercase tracking-[0.25em] text-champagneDark font-bold block">VELOIRE OLFACTORY SOMMELIER</span>
+      <h3 class="font-serifLux text-3xl font-bold text-obsidian mt-1 mb-5">Discover Your Signature Scent</h3>
+      <div id="quiz-body" class="space-y-5"></div>
+    </div>
+  </div>
+
+  <!-- 11. CHECKOUT & AUTOMATED WHATSAPP BOT CONFIRMATION MODAL -->
+  <div id="checkout-modal" class="fixed inset-0 bg-obsidian/70 backdrop-blur-md z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300 overflow-y-auto">
+    <div class="bg-white border border-champagne/50 rounded-[32px] max-w-2xl w-full p-6 sm:p-10 shadow-2xl my-8 relative max-h-[92vh] overflow-y-auto">
+      <button onclick="closeCheckoutModal()" class="absolute top-6 right-6 w-9 h-9 rounded-full bg-alabaster hover:bg-obsidian hover:text-white transition font-bold">✕</button>
+
+      <!-- Form Step -->
+      <div id="checkout-form-view">
+        <span class="text-[10px] uppercase tracking-[0.25em] text-champagneDark font-bold block" data-i18n="chk_kicker">VELOIRE PARIS CONCIERGE</span>
+        <h3 class="font-serifLux text-3xl font-bold text-obsidian mb-1" data-i18n="chk_title">Complete Your Order & Delivery</h3>
+        <p class="text-xs text-emerald-700 font-semibold mb-6">✓ Instant WhatsApp Bot Confirmation + Free Express Delivery Applied</p>
+
+        <form id="order-form" onsubmit="submitFinalOrder(event)" class="space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-charcoal mb-1" data-i18n="lbl_name">Full Name *</label>
+              <input id="ord-name" type="text" required placeholder="e.g. Youssef Ahmed" class="w-full px-4 py-3 rounded-xl bg-alabaster border border-champagne/40 text-sm focus:outline-none focus:border-obsidian">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-charcoal mb-1" data-i18n="lbl_phone">WhatsApp / Mobile Number *</label>
+              <input id="ord-phone" type="tel" required placeholder="01xxxxxxxxx" dir="ltr" class="w-full px-4 py-3 rounded-xl bg-alabaster border border-champagne/40 text-sm focus:outline-none focus:border-obsidian">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-charcoal mb-1" data-i18n="lbl_city">Governorate / City *</label>
+              <select id="ord-city" required class="w-full px-4 py-3 rounded-xl bg-alabaster border border-champagne/40 text-sm focus:outline-none focus:border-obsidian">
+                <option value="Cairo">Cairo (FREE 24H Express)</option>
+                <option value="Giza">Giza (FREE 24H Express)</option>
+                <option value="Qalyubia / Banha">Banha / Qalyubia (FREE 24H Express)</option>
+                <option value="Alexandria">Alexandria (FREE Express)</option>
+                <option value="Delta & Canal">Delta & Canal Governorates (FREE)</option>
+                <option value="Upper Egypt & Red Sea">Upper Egypt & Red Sea (FREE)</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-charcoal mb-1" data-i18n="lbl_address">Detailed Street & Building *</label>
+              <input id="ord-address" type="text" required placeholder="Street name, building, floor..." class="w-full px-4 py-3 rounded-xl bg-alabaster border border-champagne/40 text-sm focus:outline-none focus:border-obsidian">
+            </div>
+          </div>
+
+          <!-- Payment Selector -->
+          <div class="pt-1">
+            <label class="block text-xs font-bold text-charcoal mb-2" data-i18n="lbl_payment">Payment Method *</label>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <label onclick="toggleCardFields(false)" class="flex items-start gap-3 p-3.5 rounded-2xl border-2 border-obsidian bg-alabaster cursor-pointer transition" id="pay-cod-box">
+                <input type="radio" name="pay_mode" value="Cash on Delivery (COD)" checked class="mt-1 accent-obsidian">
+                <div>
+                  <div class="text-xs font-bold text-obsidian" data-i18n="pay_cod_title">💵 Cash on Delivery (COD)</div>
+                  <div class="text-[11px] text-stoneLux" data-i18n="pay_cod_sub">Inspect & try your sample vial with the courier before paying.</div>
+                </div>
+              </label>
+
+              <label onclick="toggleCardFields(true)" class="flex items-start gap-3 p-3.5 rounded-2xl border border-champagne/40 bg-white cursor-pointer transition" id="pay-visa-box">
+                <input type="radio" name="pay_mode" value="Visa / MasterCard Online" class="mt-1 accent-obsidian">
+                <div>
+                  <div class="text-xs font-bold text-obsidian" data-i18n="pay_visa_title">💳 Visa / MasterCard</div>
+                  <div class="text-[11px] text-stoneLux" data-i18n="pay_visa_sub">Instant encrypted online payment.</div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div id="visa-card-fields" class="hidden p-4 rounded-2xl bg-alabaster border border-champagne/40 space-y-3">
+            <input type="text" placeholder="Card Number (4532 •••• •••• ••••)" maxlength="19" dir="ltr" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-champagne/40 text-xs">
+            <div class="grid grid-cols-2 gap-3">
+              <input type="text" placeholder="MM / YY" maxlength="5" dir="ltr" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-champagne/40 text-xs">
+              <input type="password" placeholder="CVV" maxlength="4" dir="ltr" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-champagne/40 text-xs">
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-obsidian text-white flex items-center justify-between">
+            <div>
+              <div class="text-[10px] uppercase tracking-widest text-champagneLight">Total Payable</div>
+              <div id="chk-modal-total" class="font-serifLux text-2xl font-bold">0 EGP</div>
+            </div>
+            <button type="submit" class="px-7 py-3.5 rounded-full bg-champagne text-obsidian font-extrabold text-xs uppercase tracking-widest hover:bg-white transition shadow-lg">
+              ✓ <span data-i18n="btn_confirm_order">Confirm Order</span>
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Automated WhatsApp Bot Receipt View -->
+      <div id="checkout-success-view" class="hidden space-y-5 py-3">
+        <div class="text-center">
+          <div class="w-14 h-14 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300 flex items-center justify-center mx-auto text-2xl font-bold">✓</div>
+          <h3 class="font-serifLux text-3xl font-bold text-obsidian mt-2">Order Confirmed & WhatsApp Bot Dispatched!</h3>
+          <p class="text-xs text-stoneLux">Order Reference <span id="rec-id" class="font-mono font-bold text-obsidian">#VL-9042</span> has been logged.</p>
+        </div>
+
+        <!-- Simulated Live WhatsApp Bot Message Bubble -->
+        <div class="bg-[#ECE5DD] p-4 rounded-2xl border border-emerald-600/30 shadow-inner">
+          <div class="flex items-center justify-between text-[11px] font-bold text-emerald-900 mb-2">
+            <span>🟢 VELOIRE PARIS — Automated WhatsApp Bot</span>
+            <span>Just now</span>
+          </div>
+          <div id="whatsapp-bot-preview" class="bg-white p-4 rounded-xl text-xs text-obsidian whitespace-pre-line leading-relaxed shadow-sm border border-gray-200"></div>
+          <div class="mt-3 flex flex-col sm:flex-row gap-2">
+            <a id="whatsapp-direct-link" href="#" target="_blank" class="flex-1 py-3 rounded-xl bg-[#25D366] text-white font-bold text-xs text-center uppercase tracking-wider hover:opacity-95 transition shadow">
+              💬 Send / Receive Confirmation on WhatsApp Now
+            </a>
+            <button onclick="closeCheckoutModal()" class="px-5 py-3 rounded-xl bg-obsidian text-white text-xs font-bold uppercase tracking-wider">
+              Done
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 12. COMPREHENSIVE ATELIER ADMIN DASHBOARD MODAL -->
+  <div id="admin-modal" class="fixed inset-0 bg-obsidian/75 backdrop-blur-md z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300 overflow-y-auto">
+    <div class="bg-white border border-champagne/50 rounded-[32px] max-w-5xl w-full p-6 sm:p-8 shadow-2xl my-8 relative max-h-[92vh] flex flex-col">
+      
+      <div class="flex items-center justify-between pb-4 border-b border-champagne/30">
+        <div>
+          <span class="text-[10px] uppercase tracking-[0.25em] text-champagneDark font-bold">VELOIRE MANAGEMENT SYSTEM</span>
+          <h3 class="font-serifLux text-3xl font-bold text-obsidian">Atelier Admin Dashboard</h3>
+        </div>
+        <div class="flex items-center gap-2">
+          <button onclick="resetCatalogToDefault()" class="px-3.5 py-1.5 rounded-full border border-red-300 text-red-700 text-[11px] font-semibold hover:bg-red-50 transition">Reset Default Data</button>
+          <button onclick="closeAdminModal()" class="w-9 h-9 rounded-full bg-alabaster hover:bg-obsidian hover:text-white transition font-bold">✕</button>
+        </div>
+      </div>
+
+      <!-- Admin Navigation Tabs -->
+      <div class="flex gap-2 py-4 border-b border-champagne/20 overflow-x-auto">
+        <button onclick="switchAdminTab('manage')" id="adm-tab-manage" class="px-4 py-2 rounded-full bg-obsidian text-white text-xs font-bold uppercase tracking-wider">1. Manage Perfumes & Selective Offers</button>
+        <button onclick="switchAdminTab('add')" id="adm-tab-add" class="px-4 py-2 rounded-full bg-alabaster text-charcoal border border-champagne/30 text-xs font-bold uppercase tracking-wider">2. + Add New Perfume & Bottle Shape</button>
+        <button onclick="switchAdminTab('orders')" id="adm-tab-orders" class="px-4 py-2 rounded-full bg-alabaster text-charcoal border border-champagne/30 text-xs font-bold uppercase tracking-wider">3. Orders & WhatsApp Bot Config</button>
+      </div>
+
+      <!-- Admin Tab 1: Manage Catalog & Selective Offers -->
+      <div id="admin-view-manage" class="py-4 overflow-y-auto flex-1 space-y-3">
+        <p class="text-xs text-stoneLux mb-2">Toggle <strong>Selective Offer ON/OFF</strong> for specific perfumes only, change discount %, or update the 100ml base price (all 6 sizes 5ml–150ml+ auto-calculate proportionally).</p>
+        <div id="admin-catalog-list" class="space-y-2.5"></div>
+      </div>
+
+      <!-- Admin Tab 2: Add New Perfume -->
+      <div id="admin-view-add" class="hidden py-4 overflow-y-auto flex-1">
+        <form onsubmit="adminAddNewPerfume(event)" class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+          <div>
+            <label class="font-bold block mb-1">Perfume Name (English) *</label>
+            <input id="new-name-en" required placeholder="e.g. Imperial Aventus Privé" class="w-full px-3.5 py-2.5 rounded-xl bg-alabaster border border-champagne/40">
+          </div>
+          <div>
+            <label class="font-bold block mb-1">اسم العطر (بالعربية) *</label>
+            <input id="new-name-ar" required placeholder="مثال: إمبريال أفينتوس بريفيه" class="w-full px-3.5 py-2.5 rounded-xl bg-alabaster border border-champagne/40">
+          </div>
+          <div>
+            <label class="font-bold block mb-1">Olfactory Family *</label>
+            <select id="new-family" class="w-full px-3.5 py-2.5 rounded-xl bg-alabaster border border-champagne/40">
+              <option value="woody">Woody & Royal Oud</option>
+              <option value="amber">Amber, Vanilla & Gourmand</option>
+              <option value="fresh">Fresh, Citrus & Marine</option>
+              <option value="floral">Floral & Velvet Musk</option>
+            </select>
+          </div>
+          <div>
+            <label class="font-bold block mb-1">Bottle Architectural Silhouette *</label>
+            <select id="new-shape" class="w-full px-3.5 py-2.5 rounded-xl bg-alabaster border border-champagne/40">
+              <option value="square">Classic Square Crystal Flacon</option>
+              <option value="cylinder">Tall Cylindrical Niche Flacon</option>
+              <option value="apothecary">Rounded Apothecary Privé</option>
+            </select>
+          </div>
+          <div>
+            <label class="font-bold block mb-1">100ml Signature Price (EGP) *</label>
+            <input id="new-price" type="number" required value="1400" class="w-full px-3.5 py-2.5 rounded-xl bg-alabaster border border-champagne/40">
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <div>
+              <label class="font-bold block mb-1">Liquid Color</label>
+              <input id="new-liquid" type="color" value="#D9B87A" class="w-full h-10 rounded-xl cursor-pointer">
+            </div>
+            <div>
+              <label class="font-bold block mb-1">Cap Finish</label>
+              <select id="new-cap" class="w-full px-2 py-2.5 rounded-xl bg-alabaster border border-champagne/40">
+                <option value="#C5A059">Champagne Gold</option>
+                <option value="#111111">Matte Obsidian</option>
+                <option value="#D4D4D8">Silver Platinum</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label class="font-bold block mb-1">Top & Heart Notes (EN)</label>
+            <input id="new-notes-en" required placeholder="Bergamot, Pineapple, Smoked Birch, Musk" class="w-full px-3.5 py-2.5 rounded-xl bg-alabaster border border-champagne/40">
+          </div>
+          <div>
+            <label class="font-bold block mb-1">النوتات العطرية (عربي)</label>
+            <input id="new-notes-ar" required placeholder="برغموت، أناناس، أخشاب مدخنة، مسك" class="w-full px-3.5 py-2.5 rounded-xl bg-alabaster border border-champagne/40">
+          </div>
+          <div class="sm:col-span-2 flex items-center gap-4 p-3.5 rounded-2xl bg-amber-50 border border-champagne">
+            <label class="flex items-center gap-2 font-bold cursor-pointer">
+              <input id="new-has-offer" type="checkbox" checked class="accent-obsidian w-4 h-4">
+              <span>Enable Special Flash Offer on this Perfume</span>
+            </label>
+            <div class="flex items-center gap-2">
+              <span class="font-bold">Discount %:</span>
+              <input id="new-discount" type="number" value="20" min="5" max="70" class="w-20 px-2.5 py-1 rounded-lg bg-white border border-champagne font-bold">
+            </div>
+          </div>
+          <div class="sm:col-span-2">
+            <button type="submit" class="w-full py-3.5 rounded-full bg-obsidian text-white font-bold uppercase tracking-widest hover:bg-champagne transition">
+              + Add Creation to Live Catalog
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Admin Tab 3: Orders & WhatsApp Bot Settings -->
+      <div id="admin-view-orders" class="hidden py-4 overflow-y-auto flex-1 space-y-6 text-xs">
+        <div class="p-4 rounded-2xl bg-alabaster border border-champagne/40 space-y-3">
+          <h4 class="font-serifLux text-xl font-bold text-obsidian">WhatsApp Confirmation Bot Configuration</h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="font-bold block mb-1">Brand WhatsApp Number (with country code)</label>
+              <input id="bot-phone-input" type="text" value="201009398149" onchange="saveBotConfig()" class="w-full px-3.5 py-2 rounded-xl bg-white border border-champagne/40 font-mono">
+            </div>
+            <div>
+              <label class="font-bold block mb-1">Bot Greeting Header</label>
+              <input id="bot-header-input" type="text" value="✨ مرحباً بك في دار VELOIRE PARIS للعطور الفاخرة" onchange="saveBotConfig()" class="w-full px-3.5 py-2 rounded-xl bg-white border border-champagne/40">
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-serifLux text-xl font-bold text-obsidian mb-2">Live Customer Orders</h4>
+          <div id="admin-orders-list" class="space-y-2"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="lux-toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-obsidian text-white px-6 py-3.5 rounded-full shadow-2xl border border-champagne flex items-center gap-3 opacity-0 pointer-events-none transition-all duration-300">
+    <span class="w-2 h-2 rounded-full bg-champagne"></span>
+    <span id="lux-toast-msg" class="text-xs font-semibold tracking-wide">Added to your bag</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-pearl border-t border-champagne/30 py-14 text-center text-xs text-stoneLux">
+    <div class="max-w-7xl mx-auto px-4 space-y-3">
+      <div class="font-serifLux text-3xl font-bold tracking-[0.26em] text-obsidian">VELOIRE PARIS</div>
+      <p class="max-w-md mx-auto text-xs">Haute Parfumerie • Grasse & Cairo • Bespoke Flacons 5ml to 150ml+</p>
+      <div class="pt-4 text-[11px] text-stoneLux/70">&copy; 2026 VELOIRE PARIS. All Rights Reserved.</div>
+    </div>
+  </footer>
+
+  <!-- COMPLETE APPLICATION LOGIC -->
+  <script>
+    // 1. 6 BESPOKE BOTTLE SIZES CONFIGURATION (NO TABLES — PURE INTERACTIVE MORPHING)
+    const BOTTLE_SIZES = [
+      { ml: 5, oz: "0.17 oz", nameEn: "Mini Sample", nameAr: "عينة تجريبية", mult: 0.12, silhouette: "vial5" },
+      { ml: 10, oz: "0.34 oz", nameEn: "Travel Spray", nameAr: "بخاخ سفر", mult: 0.20, silhouette: "travel10" },
+      { ml: 30, oz: "1.0 oz", nameEn: "Small Flacon", nameAr: "حجم صغير", mult: 0.45, silhouette: "flacon30" },
+      { ml: 50, oz: "1.7 oz", nameEn: "Medium Flacon", nameAr: "الأكثر طلباً", mult: 0.68, silhouette: "flacon50" },
+      { ml: 100, oz: "3.4 oz", nameEn: "Signature Flacon", nameAr: "الحجم الأساسي", mult: 1.00, silhouette: "flacon100" },
+      { ml: 150, oz: "5.0 oz+", nameEn: "Haute Magnum", nameAr: "الإصدار الملكي الكبير", mult: 1.38, silhouette: "flacon150" }
+    ];
+
+    // 2. INITIAL 16 GLOBAL LUXURY PERFUMES (WITH SELECTIVE OFFERS ONLY ON SPECIFIC ITEMS)
+    const defaultPerfumes = [
+      {
+        id: 1, nameEn: "Oud Blanc Impérial", nameAr: "عود بلان إمبريال", family: "woody", shape: "square",
+        bestseller: true, hasOffer: true, discount: 25, basePrice: 1350, rating: "4.9 (412)",
+        liquidColor: "#D9B87A", capColor: "#C5A059", notes: ["Oud", "Vanilla", "Bergamot", "Musk"],
+        topEn: "Calabrian Bergamot, White Cardamom", topAr: "البرغموت الإيطالي، الهيل الأبيض",
+        heartEn: "Aged White Oud, Royal Frankincense", heartAr: "العود الأبيض المعتق، اللبان الملكي",
+        baseEn: "Madagascar Vanilla, Velvet Musk", baseAr: "فانيليا مدغشقر، المسك المخملي"
+      },
+      {
+        id: 2, nameEn: "Velours de Vanille", nameAr: "فيلور دي فانيليا", family: "amber", shape: "apothecary",
+        bestseller: true, hasOffer: true, discount: 20, basePrice: 1280, rating: "4.9 (358)",
+        liquidColor: "#C88A4B", capColor: "#111111", notes: ["Vanilla", "Amber", "Musk"],
+        topEn: "Bitter Almond, Pink Pepper", topAr: "اللوز المر، الفلفل الوردي",
+        heartEn: "Bourbon Vanilla Caviar, Tonka", heartAr: "كافيار فانيليا بوربون، التونكا",
+        baseEn: "Golden Amber, Sandalwood Cream", baseAr: "العنبر الذهبي، خشب الصندل الكريمي"
+      },
+      {
+        id: 3, nameEn: "Rouge Baccarat Élixir", nameAr: "روج باكارا إليكسير", family: "amber", shape: "square",
+        bestseller: true, hasOffer: false, discount: 0, basePrice: 1550, rating: "5.0 (619)",
+        liquidColor: "#D96B52", capColor: "#C5A059", notes: ["Amber", "Leather", "Oud"],
+        topEn: "Red Saffron, Grandiflorum Jasmine", topAr: "الزعفران الأحمر، الياسمين الملكي",
+        heartEn: "Amberwood, Bitter Almond", heartAr: "أخشاب العنبر، اللوز المكرمل",
+        baseEn: "Ambergris, Fir Resin, Cedar", baseAr: "العنبر الخام، خشب الأرز الأطلسي"
+      },
+      {
+        id: 4, nameEn: "Néroli Riviera Blanc", nameAr: "نيرولي ريفييرا بلان", family: "fresh", shape: "cylinder",
+        bestseller: false, hasOffer: true, discount: 15, basePrice: 1190, rating: "4.8 (204)",
+        liquidColor: "#DCE9E2", capColor: "#C5A059", notes: ["Bergamot", "Musk"],
+        topEn: "Calabrian Bergamot, Amalfi Lemon", topAr: "البرغموت، ليمون أمالفي",
+        heartEn: "Tunisian Neroli, Orange Blossom", heartAr: "النيرولي التونسي، زهر البرتقال",
+        baseEn: "Crisp White Musk, Sea Amber", baseAr: "المسك الأبيض النقي، عنبر البحر"
+      },
+      {
+        id: 5, nameEn: "Rose de Soie Privée", nameAr: "روز دي سوا بريفيه", family: "floral", shape: "apothecary",
+        bestseller: true, hasOffer: false, discount: 0, basePrice: 1420, rating: "4.9 (295)",
+        liquidColor: "#EBC8C4", capColor: "#C5A059", notes: ["Rose", "Musk", "Vanilla"],
+        topEn: "Lychee Dew, Rhubarb, Bergamot", topAr: "ندى الليتشي، البرغموت الإيطالي",
+        heartEn: "Turkish Damask Rose, Peony", heartAr: "الورد الدمشقي، الفاوانيا",
+        baseEn: "Cashmere Musk, Vanilla Bean", baseAr: "مسك الكشمير، الفانيليا"
+      },
+      {
+        id: 6, nameEn: "Cuir Impérial & Safran", nameAr: "كوير إمبريال وزعفران", family: "woody", shape: "square",
+        bestseller: false, hasOffer: true, discount: 25, basePrice: 1390, rating: "4.8 (178)",
+        liquidColor: "#B68D5C", capColor: "#111111", notes: ["Leather", "Oud", "Amber"],
+        topEn: "Iranian Saffron, Raspberry, Thyme", topAr: "الزعفران الإيراني، التوت البري",
+        heartEn: "Tuscany Suede Leather, Olibanum", heartAr: "الجلد السويدي الفاخر، اللبان",
+        baseEn: "Smoky Vetiver, Royal Oud, Amber", baseAr: "الفيتيفر المدخن، العود الملكي"
+      },
+      {
+        id: 7, nameEn: "Musc Cachemire Pur", nameAr: "مسك كشمير بيور", family: "floral", shape: "cylinder",
+        bestseller: true, hasOffer: false, discount: 0, basePrice: 1290, rating: "4.9 (402)",
+        liquidColor: "#EFECE6", capColor: "#C5A059", notes: ["Musk", "Rose", "Sandalwood"],
+        topEn: "White Aldehydes, Cotton Blossom", topAr: "زهرة القطن، الألدهيدات البيضاء",
+        heartEn: "Florentine Iris Butter, White Rose", heartAr: "زبدة السوسن الإيطالي، الورد الأبيض",
+        baseEn: "Pure Velvet Musk, Sandalwood", baseAr: "المسك المخملي الصافي، خشب الصندل"
+      },
+      {
+        id: 8, nameEn: "Santal Crème 33", nameAr: "سانتال كريم ٣٣", family: "woody", shape: "apothecary",
+        bestseller: true, hasOffer: false, discount: 0, basePrice: 1480, rating: "4.9 (312)",
+        liquidColor: "#DFCAA0", capColor: "#111111", notes: ["Sandalwood", "Leather", "Musk"],
+        topEn: "Green Cardamom, Violet Leaf", topAr: "الهيل الأخضر، أوراق البنفسج",
+        heartEn: "Mysore Sandalwood, Papyrus", heartAr: "خشب صندل ميسور الكريمي، البردي",
+        baseEn: "Soft Leather, Virginia Cedar", baseAr: "الجلود الناعمة، خشب الأرز"
+      },
+      {
+        id: 9, nameEn: "Bleu d'Ambre Marin", nameAr: "بلو دامبر مارين", family: "fresh", shape: "square",
+        bestseller: true, hasOffer: true, discount: 20, basePrice: 1320, rating: "4.9 (490)",
+        liquidColor: "#C6D8E4", capColor: "#111111", notes: ["Bergamot", "Amber", "Sandalwood"],
+        topEn: "Grapefruit Zest, Bergamot, Mint", topAr: "الجريب فروت، البرغموت، النعناع",
+        heartEn: "Pink Pepper, Ginger, Marine Accord", heartAr: "الفلفل الوردي، الزنجبيل، نسيم البحر",
+        baseEn: "Incense Smoke, Ambergris, Sandalwood", baseAr: "البخور الفاخر، العنبر، الصندل"
+      },
+      {
+        id: 10, nameEn: "Ambre Nuit d'Orient", nameAr: "عنبر نوي دوريان", family: "amber", shape: "cylinder",
+        bestseller: false, hasOffer: false, discount: 0, basePrice: 1450, rating: "4.9 (189)",
+        liquidColor: "#CFA060", capColor: "#C5A059", notes: ["Amber", "Rose", "Vanilla"],
+        topEn: "Spiced Cinnamon, Bergamot Peel", topAr: "القرفة الدافئة، قشور البرغموت",
+        heartEn: "Damask Rose, Golden Honey", heartAr: "الورد الدمشقي، العسل الملكي",
+        baseEn: "Benzoin Resin, Dark Vanilla", baseAr: "الجاوي، الفانيليا الداكنة"
+      },
+      {
+        id: 11, nameEn: "Tabac & Vanille Royale", nameAr: "توباك وفانيليا رويال", family: "amber", shape: "square",
+        bestseller: false, hasOffer: true, discount: 25, basePrice: 1390, rating: "4.9 (275)",
+        liquidColor: "#C28B4E", capColor: "#111111", notes: ["Vanilla", "Amber", "Leather"],
+        topEn: "Cuban Tobacco Leaf, Warm Clove", topAr: "أوراق التبغ الفاخر، القرنفل",
+        heartEn: "Cacao Blossom, Creamy Vanilla", heartAr: "زهر الكاكاو، قرون الفانيليا",
+        baseEn: "Dried Fruits, Mahogany Wood", baseAr: "الفواكه المجففة، أخشاب الماهوجني"
+      },
+      {
+        id: 12, nameEn: "Fleur d'Oranger Soleil", nameAr: "فلور دورانج سوليه", family: "floral", shape: "cylinder",
+        bestseller: false, hasOffer: false, discount: 0, basePrice: 1250, rating: "4.8 (164)",
+        liquidColor: "#F2DFB6", capColor: "#C5A059", notes: ["Bergamot", "Musk", "Rose"],
+        topEn: "Sweet Mandarin, Bergamot", topAr: "اليوسفي الحلو، البرغموت",
+        heartEn: "Moroccan Orange Blossom, Jasmine", heartAr: "زهر البرتقال المغربي، الياسمين",
+        baseEn: "Solar Amber, White Musk", baseAr: "العنبر الشمسي، المسك الأبيض"
+      },
+      {
+        id: 13, nameEn: "Aventus Privé Absolu", nameAr: "أفينتوس بريفيه أبسولو", family: "fresh", shape: "square",
+        bestseller: true, hasOffer: true, discount: 20, basePrice: 1490, rating: "5.0 (540)",
+        liquidColor: "#E4D7B5", capColor: "#111111", notes: ["Bergamot", "Musk", "Oud"],
+        topEn: "Roasted Pineapple, Blackcurrant, Bergamot", topAr: "الأناناس المشوي، الكشمش، البرغموت",
+        heartEn: "Smoky Birch Wood, Moroccan Jasmine", heartAr: "أخشاب البتولا المدخنة، الياسمين",
+        baseEn: "Oakmoss, Ambergris, Musk", baseAr: "طحلب البلوط، العنبر، المسك"
+      },
+      {
+        id: 14, nameEn: "Oud Ispahan Velours", nameAr: "عود أصفهان فيلور", family: "woody", shape: "apothecary",
+        bestseller: false, hasOffer: false, discount: 0, basePrice: 1520, rating: "4.9 (230)",
+        liquidColor: "#C69363", capColor: "#C5A059", notes: ["Oud", "Rose", "Amber"],
+        topEn: "Labdanum Cistus, Spiced Rose", topAr: "اللابدانوم، الورد المتبل",
+        heartEn: "Damask Rose Ispahan, Patchouli", heartAr: "ورد أصفهان الدمشقي، الباتشولي",
+        baseEn: "Laotian Oud, Mysore Sandalwood", baseAr: "العود اللاوسي، خشب الصندل"
+      },
+      {
+        id: 15, nameEn: "Angels' Cognac & Miel", nameAr: "أنجلز كونياك وعسل", family: "amber", shape: "square",
+        bestseller: true, hasOffer: true, discount: 15, basePrice: 1440, rating: "4.9 (390)",
+        liquidColor: "#C97D3B", capColor: "#C5A059", notes: ["Vanilla", "Amber", "Sandalwood"],
+        topEn: "Aged Cognac Essence, Cinnamon Bark", topAr: "خلاصة الكونياك المعتق، القرفة",
+        heartEn: "Roasted Hazelnut, Tonka Bean, Oak", heartAr: "البندق المحمص، التونكا، خشب البلوط",
+        baseEn: "Praline Vanilla, Candied Sandalwood", baseAr: "برالين الفانيليا، خشب الصندل"
+      },
+      {
+        id: 16, nameEn: "Blanche Peau d'Iris", nameAr: "بلانش بو ديريس", family: "floral", shape: "cylinder",
+        bestseller: false, hasOffer: false, discount: 0, basePrice: 1310, rating: "4.8 (175)",
+        liquidColor: "#EAE6DF", capColor: "#D4D4D8", notes: ["Musk", "Rose", "Sandalwood"],
+        topEn: "Pink Pepper, White Rose, Aldehydes", topAr: "الفلفل الوردي، الورد الأبيض",
+        heartEn: "Violet, Neroli, Peony", heartAr: "البنفسج، النيرولي، الفاوانيا",
+        baseEn: "Blonde Woods, Cashmere Musk, Sandalwood", baseAr: "الأخشاب الشقراء، مسك الكشمير"
+      }
+    ];
+
+    // Load Catalog & Orders from localStorage
+    let perfumesData = JSON.parse(localStorage.getItem('veloire_catalog_v2')) || defaultPerfumes;
+    let savedOrders = JSON.parse(localStorage.getItem('veloire_orders_v2')) || [];
+    let botConfig = JSON.parse(localStorage.getItem('veloire_bot_v2')) || {
+      phone: "201000000000",
+      header: "✨ مرحباً بك في دار VELOIRE PARIS للعطور الفاخرة"
+    };
+
+    // Track Selected Size per Product Card (Default 100ml)
+    let selectedCardSizes = {};
+    let heroSelectedSize = 100;
+    let currentLang = 'en';
+    let activeCategory = 'all';
+    let activeNote = '';
+    let cart = [];
+
+    function saveCatalog() {
+      localStorage.setItem('veloire_catalog_v2', JSON.stringify(perfumesData));
+    }
+
+    // Calculate Final & Old Price for any Perfume + Volume (ml)
+    function calculateSizePricing(p, ml) {
+      const sizeObj = BOTTLE_SIZES.find(s => s.ml === Number(ml)) || BOTTLE_SIZES[4];
+      const rawPrice = Math.round((p.basePrice * sizeObj.mult) / 10) * 10;
+      if (p.hasOffer && p.discount > 0) {
+        const oldPrice = Math.round((rawPrice / (1 - p.discount / 100)) / 10) * 10;
+        return { price: rawPrice, oldPrice, sizeObj };
+      }
+      return { price: rawPrice, oldPrice: null, sizeObj };
+    }
+
+    // 3. DYNAMIC ARCHITECTURAL SVG FLACON GENERATOR (MORPHS BY VOLUME 5ML -> 150ML+ & BOTTLE SHAPE)
+    function renderMorphingBottleSVG(p, ml = 100, customClass = "w-32 h-44") {
+      const sizeNum = Number(ml);
+      // 5ml Mini Sample Atomizer
+      if (sizeNum === 5) {
+        return `
+          <svg class="${customClass} mx-auto flacon-svg" viewBox="0 0 160 220" fill="none">
+            <rect x="69" y="25" width="22" height="32" rx="3" fill="#111111"/>
+            <rect x="72" y="57" width="16" height="8" fill="#C5A059"/>
+            <rect x="66" y="65" width="28" height="130" rx="5" fill="#FFFFFF" stroke="#C5A059" stroke-width="1.5"/>
+            <rect x="70" y="88" width="20" height="102" rx="3" fill="${p.liquidColor}" fill-opacity="0.75"/>
+            <line x1="80" y1="65" x2="80" y2="185" stroke="#C5A059" stroke-width="0.8" stroke-dasharray="2 2"/>
+            <rect x="68" y="108" width="24" height="48" fill="#FFFFFF" stroke="#C5A059" stroke-width="0.9"/>
+            <text x="80" y="130" text-anchor="middle" fill="#111111" font-family="Cormorant Garamond, serif" font-weight="700" font-size="6.5">VELOIRE</text>
+            <text x="80" y="144" text-anchor="middle" fill="#9A7832" font-family="Plus Jakarta Sans" font-weight="700" font-size="6">5 ML</text>
+          </svg>
+        `;
+      }
+      // 10ml Travel Spray Cylinder
+      if (sizeNum === 10) {
+        return `
+          <svg class="${customClass} mx-auto flacon-svg" viewBox="0 0 160 220" fill="none">
+            <rect x="64" y="18" width="32" height="36" rx="4" fill="${p.capColor}" stroke="#C5A059" stroke-width="1.2"/>
+            <rect x="68" y="54" width="24" height="8" fill="#C5A059"/>
+            <rect x="60" y="62" width="40" height="138" rx="7" fill="#FFFFFF" stroke="#C5A059" stroke-width="1.6"/>
+            <rect x="65" y="80" width="30" height="114" rx="4" fill="${p.liquidColor}" fill-opacity="0.72"/>
+            <rect x="64" y="102" width="32" height="56" rx="2" fill="#FFFFFF" stroke="#C5A059" stroke-width="1"/>
+            <text x="80" y="124" text-anchor="middle" fill="#111111" font-family="Cormorant Garamond, serif" font-weight="700" font-size="7.5" letter-spacing="1">VELOIRE</text>
+            <text x="80" y="142" text-anchor="middle" fill="#9A7832" font-family="Plus Jakarta Sans" font-weight="700" font-size="6.5">10 ML</text>
+          </svg>
+        `;
+      }
+
+      // Scale geometry for 30ml, 50ml, 100ml, 150ml+
+      const widthMap = { 30: 76, 50: 94, 100: 112, 150: 128 };
+      const heightMap = { 30: 112, 50: 130, 100: 146, 150: 156 };
+      const bw = widthMap[sizeNum] || 112;
+      const bh = heightMap[sizeNum] || 146;
+      const bx = (160 - bw) / 2;
+      const by = 200 - bh;
+      const rx = p.shape === 'apothecary' ? 26 : (p.shape === 'cylinder' ? 18 : 10);
+
+      return `
+        <svg class="${customClass} mx-auto flacon-svg" viewBox="0 0 160 220" fill="none">
+          <!-- Bespoke Cap -->
+          <rect x="58" y="${by - 36}" width="44" height="28" rx="${p.shape === 'apothecary' ? 12 : 4}" fill="${p.capColor}" stroke="#C5A059" stroke-width="1.2"/>
+          <rect x="66" y="${by - 8}" width="28" height="8" fill="#C5A059"/>
+          <!-- Crystal Body -->
+          <rect x="${bx}" y="${by}" width="${bw}" height="${bh}" rx="${rx}" fill="#FFFFFF" stroke="#C5A059" stroke-width="1.8"/>
+          <!-- Inner Perfume Oil -->
+          <rect x="${bx + 7}" y="${by + 16}" width="${bw - 14}" height="${bh - 24}" rx="${Math.max(4, rx - 5)}" fill="${p.liquidColor}" fill-opacity="0.68"/>
+          <!-- Glass Reflection -->
+          <rect x="${bx + 11}" y="${by + 8}" width="8" height="${bh - 16}" fill="#FFFFFF" fill-opacity="0.55"/>
+          <!-- Couture French Plaque -->
+          <rect x="${80 - 34}" y="${by + bh/2 - 34}" width="68" height="68" rx="3" fill="#FFFFFF" stroke="#C5A059" stroke-width="1.2"/>
+          <text x="80" y="${by + bh/2 - 12}" text-anchor="middle" fill="#111111" font-family="Cormorant Garamond, serif" font-weight="700" font-size="10" letter-spacing="2">VELOIRE</text>
+          <line x1="62" y1="${by + bh/2 - 5}" x2="98" y2="${by + bh/2 - 5}" stroke="#C5A059" stroke-width="0.8"/>
+          <text x="80" y="${by + bh/2 + 9}" text-anchor="middle" fill="#9A7832" font-family="Plus Jakarta Sans" font-weight="700" font-size="6.5">EXTRAIT 35%</text>
+          <text x="80" y="${by + bh/2 + 23}" text-anchor="middle" fill="#222" font-family="Plus Jakarta Sans" font-weight="700" font-size="7">${sizeNum === 150 ? '150 ML+' : sizeNum + ' ML'}</text>
+        </svg>
+      `;
+    }
+
+    // 4. HERO INTERACTIVE SIZE MORPHING
+    function setHeroSize(ml) {
+      heroSelectedSize = ml;
+      const p = perfumesData[0];
+      const { price, oldPrice, sizeObj } = calculateSizePricing(p, ml);
+
+      document.getElementById('hero-interactive-flacon').innerHTML = renderMorphingBottleSVG(p, ml, "w-48 h-60");
+      document.getElementById('hero-size-badge').innerText = `${ml === 150 ? '150 ml+' : ml + ' ml'} • ${sizeObj.oz}`;
+      document.getElementById('hero-size-use').innerText = currentLang === 'en' ? sizeObj.nameEn : sizeObj.nameAr;
+      document.getElementById('hero-live-price').innerText = `${price.toLocaleString()} EGP`;
+      document.getElementById('hero-old-price').innerText = oldPrice ? `${oldPrice.toLocaleString()} EGP` : '';
+
+      document.querySelectorAll('.hero-sz-btn').forEach(btn => {
+        if (Number(btn.dataset.sz) === ml) {
+          btn.className = "hero-sz-btn py-2 rounded-xl border border-obsidian bg-obsidian text-white text-[11px] font-bold transition shadow";
+        } else {
+          btn.className = "hero-sz-btn py-2 rounded-xl border border-champagne/30 bg-alabaster text-[11px] font-bold text-charcoal hover:border-obsidian transition";
+        }
+      });
+    }
+
+    function addHeroPerfumeToCart() {
+      addToCart(perfumesData[0].id, heroSelectedSize, '');
+    }
+
+    // 5. RENDER MASTER CATALOG (WITH SLEEK 6-SIZE PILLS & SELECTIVE OFFERS ONLY)
+    function selectCardVolume(perfumeId, ml) {
+      selectedCardSizes[perfumeId] = ml;
+      handleSearchAndFilter();
+    }
+
+    function handleSearchAndFilter() {
+      const query = document.getElementById('live-search-input').value.trim().toLowerCase();
+      const sortVal = document.getElementById('sort-select').value;
+      document.getElementById('clear-search-btn').classList.toggle('hidden', query.length === 0);
+
+      let filtered = perfumesData.filter(p => {
+        const matchesCat =
+          activeCategory === 'all' ||
+          (activeCategory === 'offers' && p.hasOffer) ||
+          (activeCategory === 'bestseller' && p.bestseller) ||
+          p.family === activeCategory;
+
+        const matchesNote = !activeNote || p.notes.some(n => n.toLowerCase() === activeNote.toLowerCase());
+        const searchPool = `${p.nameEn} ${p.nameAr} ${p.topEn} ${p.heartEn} ${p.baseEn} ${p.topAr} ${p.heartAr} ${p.baseAr} ${p.notes.join(' ')}`.toLowerCase();
+        const matchesQuery = !query || searchPool.includes(query);
+
+        return matchesCat && matchesNote && matchesQuery;
+      });
+
+      if (sortVal === 'offers') {
+        filtered.sort((a, b) => (b.hasOffer ? 1 : 0) - (a.hasOffer ? 1 : 0));
+      } else if (sortVal === 'price-low') {
+        filtered.sort((a, b) => a.basePrice - b.basePrice);
+      } else if (sortVal === 'price-high') {
+        filtered.sort((a, b) => b.basePrice - a.basePrice);
+      }
+
+      const grid = document.getElementById('catalog-grid');
+      const noRes = document.getElementById('no-results-box');
+      document.getElementById('results-counter').innerText = currentLang === 'en'
+        ? `Showing ${filtered.length} of ${perfumesData.length} luxury extraits`
+        : `عرض ${filtered.length} من أصل ${perfumesData.length} عطراً فاخراً`;
+
+      if (filtered.length === 0) {
+        grid.innerHTML = '';
+        noRes.classList.remove('hidden');
+        return;
+      }
+      noRes.classList.add('hidden');
+
+      grid.innerHTML = filtered.map(p => {
+        const chosenMl = selectedCardSizes[p.id] || 100;
+        const { price, oldPrice, sizeObj } = calculateSizePricing(p, chosenMl);
+        const title = currentLang === 'en' ? p.nameEn : p.nameAr;
+        const top = currentLang === 'en' ? p.topEn : p.topAr;
+        const heart = currentLang === 'en' ? p.heartEn : p.heartAr;
+        const sizeLabel = currentLang === 'en' ? sizeObj.nameEn : sizeObj.nameAr;
+
+        return `
+          <div class="lux-card rounded-[30px] p-5 flex flex-col justify-between relative group">
+            <div>
+              <!-- Selective Offer Badge (Only shown if p.hasOffer is true!) -->
+              <div class="flex items-center justify-between gap-2 mb-3 min-h-[24px]">
+                ${p.bestseller
+                  ? `<span class="px-3 py-0.5 rounded-full bg-obsidian text-champagneLight text-[10px] font-bold uppercase tracking-wider">${currentLang === 'en' ? 'Best Seller' : 'الأكثر مبيعاً'}</span>`
+                  : `<span class="px-3 py-0.5 rounded-full bg-pearl text-stoneLux text-[10px] font-bold uppercase tracking-wider">Extrait 35%</span>`
+                }
+                ${p.hasOffer
+                  ? `<span class="px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-900 border border-champagne text-[10px] font-extrabold animate-pulse">🔥 -${p.discount}% OFFER</span>`
+                  : ''
+                }
+              </div>
+
+              <!-- Morphing Bottle Preview Stage -->
+              <div onclick="openQuickView(${p.id})" class="cursor-pointer py-4 rounded-2xl bg-gradient-to-b from-alabaster to-white border border-champagne/20 relative overflow-hidden">
+                ${renderMorphingBottleSVG(p, chosenMl, "w-32 h-40")}
+                <div class="text-center mt-1">
+                  <span class="text-[10px] text-champagneDark font-bold uppercase tracking-wider">${chosenMl === 150 ? '150ml+' : chosenMl + 'ml'} • ${sizeLabel}</span>
+                </div>
+              </div>
+
+              <!-- Title & Notes -->
+              <div class="mt-4">
+                <h3 onclick="openQuickView(${p.id})" class="font-serifLux text-2xl font-bold text-obsidian leading-tight cursor-pointer hover:text-champagne transition">${title}</h3>
+                <div class="mt-2 pt-2 border-t border-champagne/20 text-xs text-stoneLux space-y-0.5">
+                  <div class="truncate"><strong class="text-charcoal">${currentLang === 'en' ? 'Top:' : 'الافتتاحية:'}</strong> ${top}</div>
+                  <div class="truncate"><strong class="text-charcoal">${currentLang === 'en' ? 'Heart:' : 'القلب:'}</strong> ${heart}</div>
+                </div>
+              </div>
+
+              <!-- Sleek 6-Volume Selector Pills -->
+              <div class="mt-3 pt-2.5 border-t border-champagne/20">
+                <div class="grid grid-cols-6 gap-1">
+                  ${BOTTLE_SIZES.map(s => `
+                    <button 
+                      onclick="selectCardVolume(${p.id}, ${s.ml})" 
+                      class="py-1.5 rounded-lg text-[10px] font-bold transition ${chosenMl === s.ml ? 'bg-obsidian text-white shadow' : 'bg-alabaster text-charcoal hover:bg-pearl border border-champagne/25'}"
+                    >${s.ml === 150 ? '150+' : s.ml}</button>
+                  `).join('')}
+                </div>
+              </div>
+            </div>
+
+            <!-- Dynamic Price & Add Button -->
+            <div class="mt-4 pt-3 border-t border-champagne/25">
+              <div class="flex items-baseline justify-between mb-3">
+                <div>
+                  <span class="font-serifLux text-2xl font-bold text-obsidian">${price.toLocaleString()} EGP</span>
+                  ${oldPrice ? `<span class="text-xs line-through text-stoneLux ml-1.5">${oldPrice.toLocaleString()} EGP</span>` : ''}
+                </div>
+                <button onclick="openQuickView(${p.id})" class="text-[11px] underline text-stoneLux hover:text-obsidian font-semibold">
+                  ${currentLang === 'en' ? 'Engrave / Details' : 'حفر اسم / تفاصيل'}
+                </button>
+              </div>
+
+              <button onclick="addToCart(${p.id}, ${chosenMl}, '')" class="w-full py-3 rounded-full bg-obsidian text-white hover:bg-champagne hover:text-obsidian transition-all text-xs font-bold uppercase tracking-widest shadow-md">
+                + ${currentLang === 'en' ? `Add ${chosenMl}ml to Bag` : `أضف حجم ${chosenMl} مل`}
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // 6. PRODUCT QUICK-VIEW MODAL WITH VOLUME MORPHING & FREE BOTTLE ENGRAVING
+    let modalActiveSize = 100;
+    function openQuickView(id, sizeOverride) {
+      const p = perfumesData.find(x => x.id === id);
+      if (!p) return;
+      modalActiveSize = sizeOverride || selectedCardSizes[id] || 100;
+      const { price, oldPrice, sizeObj } = calculateSizePricing(p, modalActiveSize);
+      const title = currentLang === 'en' ? p.nameEn : p.nameAr;
+
+      const content = document.getElementById('quickview-content');
+      content.innerHTML = `
+        <button onclick="closeQuickView()" class="absolute top-5 right-5 w-9 h-9 rounded-full bg-alabaster hover:bg-obsidian hover:text-white transition font-bold">✕</button>
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+          
+          <!-- Left: Morphing Bottle Preview -->
+          <div class="md:col-span-5 bg-alabaster rounded-3xl p-6 text-center border border-champagne/30">
+            ${renderMorphingBottleSVG(p, modalActiveSize, "w-44 h-56")}
+            <div class="mt-2 font-serifLux text-xl font-bold text-obsidian">${modalActiveSize === 150 ? '150ml+' : modalActiveSize + 'ml'} (${sizeObj.oz})</div>
+            <div class="text-xs text-champagneDark font-semibold">${currentLang === 'en' ? sizeObj.nameEn : sizeObj.nameAr}</div>
+          </div>
+
+          <!-- Right: Olfactory Pyramid, 6 Sizes & Free Engraving -->
+          <div class="md:col-span-7 space-y-4">
+            <div class="flex items-center gap-2">
+              <span class="text-[10px] uppercase tracking-[0.25em] text-champagneDark font-bold">Extrait de Parfum • 35%</span>
+              ${p.hasOffer ? `<span class="px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-900 text-[10px] font-extrabold">🔥 -${p.discount}% SELECTED OFFER</span>` : ''}
+            </div>
+
+            <h3 class="font-serifLux text-3xl sm:text-4xl font-bold text-obsidian">${title}</h3>
+
+            <div class="flex items-baseline gap-3">
+              <span class="font-serifLux text-3xl font-bold text-obsidian">${price.toLocaleString()} EGP</span>
+              ${oldPrice ? `<span class="text-sm line-through text-stoneLux">${oldPrice.toLocaleString()} EGP</span>` : ''}
+            </div>
+
+            <!-- Select Volume in Modal -->
+            <div>
+              <label class="block text-[11px] font-bold uppercase tracking-wider text-charcoal mb-2">Select Flacon Volume:</label>
+              <div class="grid grid-cols-3 sm:grid-cols-6 gap-1.5">
+                ${BOTTLE_SIZES.map(s => `
+                  <button onclick="openQuickView(${p.id}, ${s.ml})" class="py-2 px-1 rounded-xl border text-center transition ${modalActiveSize === s.ml ? 'border-obsidian bg-obsidian text-white font-bold shadow' : 'border-champagne/40 bg-alabaster text-charcoal hover:border-obsidian'}">
+                    <div class="text-xs font-bold">${s.ml === 150 ? '150ml+' : s.ml + 'ml'}</div>
+                    <div class="text-[9px] opacity-80">${s.oz}</div>
+                  </button>
+                `).join('')}
+              </div>
+            </div>
+
+            <!-- Olfactory Notes Pyramid -->
+            <div class="p-3.5 rounded-2xl bg-alabaster border border-champagne/30 space-y-1.5 text-xs">
+              <div><strong class="text-obsidian">Top Notes:</strong> <span class="text-stoneLux">${currentLang === 'en' ? p.topEn : p.topAr}</span></div>
+              <div><strong class="text-obsidian">Heart Notes:</strong> <span class="text-stoneLux">${currentLang === 'en' ? p.heartEn : p.heartAr}</span></div>
+              <div><strong class="text-obsidian">Base Notes:</strong> <span class="text-stoneLux">${currentLang === 'en' ? p.baseEn : p.baseAr}</span></div>
+            </div>
+
+            <!-- Complimentary Gold Plaque Engraving -->
+            <div>
+              <label class="block text-[11px] font-bold uppercase tracking-wider text-champagneDark mb-1">✒️ Complimentary Bottle Engraving (Optional):</label>
+              <input id="modal-engrave-input" type="text" maxlength="18" placeholder="Type name or initials to engrave on bottle (e.g. Youssef)..." class="w-full px-3.5 py-2.5 rounded-xl bg-alabaster border border-champagne/40 text-xs focus:outline-none focus:border-obsidian">
+            </div>
+
+            <button onclick="addFromModalToCart(${p.id}, ${modalActiveSize})" class="w-full py-4 rounded-full bg-obsidian text-white font-bold text-xs uppercase tracking-widest hover:bg-champagne transition shadow-xl">
+              + Add ${modalActiveSize}ml Flacon to Bag — ${price.toLocaleString()} EGP
+            </button>
+          </div>
+        </div>
+      `;
+      document.getElementById('quickview-modal').classList.remove('opacity-0', 'pointer-events-none');
+    }
+
+    function addFromModalToCart(id, ml) {
+      const engraveTxt = document.getElementById('modal-engrave-input')?.value.trim() || '';
+      addToCart(id, ml, engraveTxt);
+      closeQuickView();
+    }
+
+    function closeQuickView() {
+      document.getElementById('quickview-modal').classList.add('opacity-0', 'pointer-events-none');
+    }
+
+    // 7. CART SYSTEM (SUPPORTS MULTIPLE SIZES & ENGRAVING)
+    function addToCart(id, ml = 100, engraving = '') {
+      const p = perfumesData.find(x => x.id === id);
+      if (!p) return;
+      const { price, sizeObj } = calculateSizePricing(p, ml);
+      const cartKey = `${id}-${ml}-${engraving}`;
+      const existing = cart.find(item => item.cartKey === cartKey);
+
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({
+          cartKey,
+          id: p.id,
+          ml,
+          sizeNameEn: sizeObj.nameEn,
+          sizeNameAr: sizeObj.nameAr,
+          nameEn: p.nameEn,
+          nameAr: p.nameAr,
+          engraving,
+          price,
+          qty: 1
+        });
+      }
+      updateCartUI();
+      showToast(currentLang === 'en' ? `${p.nameEn} (${ml}ml) added to bag` : `تمت إضافة ${p.nameAr} (${ml} مل) للحقيبة`);
+    }
+
+    function addBundleToCart() {
+      const cartKey = "bundle-royal-duo";
+      const existing = cart.find(i => i.cartKey === cartKey);
+      if (existing) existing.qty += 1;
+      else {
+        cart.push({
+          cartKey,
+          id: 999,
+          ml: 200,
+          sizeNameEn: "2x 100ml + 5 Samples",
+          sizeNameAr: "عطرين ١٠٠ مل + ٥ عينات",
+          nameEn: "The Royal Duo Coffret",
+          nameAr: "بوكس الثنائي الملكي",
+          engraving: "",
+          price: 2250,
+          qty: 1
+        });
+      }
+      updateCartUI();
+      openCartDrawer();
+    }
+
+    function changeCartQty(cartKey, delta) {
+      const item = cart.find(x => x.cartKey === cartKey);
+      if (!item) return;
+      item.qty += delta;
+      if (item.qty <= 0) cart = cart.filter(x => x.cartKey !== cartKey);
+      updateCartUI();
+    }
+
+    function updateCartUI() {
+      const countEl = document.getElementById('header-cart-count');
+      const listEl = document.getElementById('cart-items-list');
+      const totEl = document.getElementById('cart-total');
+      const chkTotal = document.getElementById('chk-modal-total');
+
+      const totalCount = cart.reduce((s, i) => s + i.qty, 0);
+      const subtotal = cart.reduce((s, i) => s + (i.price * i.qty), 0);
+
+      countEl.innerText = totalCount;
+      totEl.innerText = `${subtotal.toLocaleString()} EGP`;
+      chkTotal.innerText = `${subtotal.toLocaleString()} EGP`;
+
+      if (cart.length === 0) {
+        listEl.innerHTML = `<div class="text-center py-16 text-stoneLux text-xs">Your luxury bag is currently empty.</div>`;
+        return;
+      }
+
+      listEl.innerHTML = cart.map(item => `
+        <div class="p-4 rounded-2xl bg-alabaster border border-champagne/30 flex items-center justify-between gap-3">
+          <div>
+            <h4 class="font-serifLux text-lg font-bold text-obsidian">${currentLang === 'en' ? item.nameEn : item.nameAr}</h4>
+            <div class="text-[11px] text-stoneLux font-semibold">${item.ml}ml • ${currentLang === 'en' ? item.sizeNameEn : item.sizeNameAr}</div>
+            ${item.engraving ? `<div class="text-[10px] text-champagneDark font-bold">✒️ Engraved: "${item.engraving}"</div>` : ''}
+            <span class="text-xs font-extrabold text-obsidian">${item.price.toLocaleString()} EGP</span>
+          </div>
+          <div class="flex items-center gap-2 bg-white border border-champagne/40 rounded-full px-2.5 py-1">
+            <button onclick="changeCartQty('${item.cartKey}', -1)" class="text-xs font-bold px-1.5">-</button>
+            <span class="text-xs font-bold">${item.qty}</span>
+            <button onclick="changeCartQty('${item.cartKey}', 1)" class="text-xs font-bold px-1.5">+</button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function openCartDrawer() {
+      document.getElementById('cart-drawer').classList.remove('translate-x-full');
+      document.getElementById('cart-backdrop').classList.remove('opacity-0', 'pointer-events-none');
+    }
+    function closeCartDrawer() {
+      document.getElementById('cart-drawer').classList.add('translate-x-full');
+      document.getElementById('cart-backdrop').classList.add('opacity-0', 'pointer-events-none');
+    }
+
+    // 8. CHECKOUT & AUTOMATED WHATSAPP BOT CONFIRMATION
+    function openCheckoutModal() {
+      if (cart.length === 0) {
+        showToast("Please select a perfume first");
+        return;
+      }
+      closeCartDrawer();
+      document.getElementById('checkout-form-view').classList.remove('hidden');
+      document.getElementById('checkout-success-view').classList.add('hidden');
+      document.getElementById('checkout-modal').classList.remove('opacity-0', 'pointer-events-none');
+    }
+    function closeCheckoutModal() {
+      document.getElementById('checkout-modal').classList.add('opacity-0', 'pointer-events-none');
+    }
+    function toggleCardFields(show) {
+      document.getElementById('visa-card-fields').classList.toggle('hidden', !show);
+    }
+
+    function submitFinalOrder(e) {
+      e.preventDefault();
+      const name = document.getElementById('ord-name').value.trim();
+      const phone = document.getElementById('ord-phone').value.trim();
+      const city = document.getElementById('ord-city').value;
+      const address = document.getElementById('ord-address').value.trim();
+      const payMethod = document.querySelector('input[name="pay_mode"]:checked').value;
+      const freeSamples = document.getElementById('free-sample-select').value;
+      const subtotal = cart.reduce((s, i) => s + (i.price * i.qty), 0);
+      const orderId = 'VL-' + Math.floor(10000 + Math.random() * 90000);
+
+      const itemsSummary = cart.map(i => `• ${i.nameEn} (${i.ml}ml x${i.qty})${i.engraving ? ` [Engraved: ${i.engraving}]` : ''} - ${i.price * i.qty} EGP`).join('\n');
+
+      const botMsg = `${botConfig.header}\n\nشكراً لطلبك يا ${name}! تم استلام وتأكيد طلبك بنجاح ✅\n🔖 رقم الطلب: #${orderId}\n\n📦 العطور المطلوبة:\n${itemsSummary}\n🎁 العينات المجانية: ${freeSamples}\n\n📍 العنوان: ${city} - ${address}\n💳 الدفع: ${payMethod}\n💰 الإجمالي: ${subtotal.toLocaleString()} EGP (شامل الشحن المجاني السريع)`;
+
+      // Save Order to Admin Log
+      savedOrders.unshift({
+        orderId, name, phone, city, address, payMethod, total: subtotal, items: itemsSummary, date: new Date().toLocaleString()
+      });
+      localStorage.setItem('veloire_orders_v2', JSON.stringify(savedOrders));
+
+      document.getElementById('rec-id').innerText = '#' + orderId;
+      document.getElementById('whatsapp-bot-preview').innerText = botMsg;
+      const waUrl = `https://wa.me/${botConfig.phone.replace(/[^0-9]/g, '')}?text=${encodeURIComponent(botMsg)}`;
+      document.getElementById('whatsapp-direct-link').href = waUrl;
+
+      document.getElementById('checkout-form-view').classList.add('hidden');
+      document.getElementById('checkout-success-view').classList.remove('hidden');
+
+      cart = [];
+      updateCartUI();
+      document.getElementById('order-form').reset();
+    }
+
+    // 9. ATELIER ADMIN DASHBOARD FUNCTIONS
+    function openAdminModal() {
+      renderAdminCatalog();
+      renderAdminOrders();
+      document.getElementById('admin-modal').classList.remove('opacity-0', 'pointer-events-none');
+    }
+    function closeAdminModal() {
+      document.getElementById('admin-modal').classList.add('opacity-0', 'pointer-events-none');
+    }
+    function switchAdminTab(tab) {
+      ['manage', 'add', 'orders'].forEach(t => {
+        document.getElementById(`admin-view-${t}`).classList.toggle('hidden', t !== tab);
+        document.getElementById(`adm-tab-${t}`).className = t === tab
+          ? "px-4 py-2 rounded-full bg-obsidian text-white text-xs font-bold uppercase tracking-wider"
+          : "px-4 py-2 rounded-full bg-alabaster text-charcoal border border-champagne/30 text-xs font-bold uppercase tracking-wider";
+      });
+      if (tab === 'orders') renderAdminOrders();
+    }
+
+    function renderAdminCatalog() {
+      const list = document.getElementById('admin-catalog-list');
+      list.innerHTML = perfumesData.map(p => `
+        <div class="p-3.5 rounded-2xl bg-alabaster border border-champagne/30 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
+          <div class="flex items-center gap-3">
+            <span class="w-5 h-5 rounded-full border border-obsidian/30 shrink-0" style="background:${p.liquidColor}"></span>
+            <div>
+              <div class="font-bold text-obsidian">${p.nameEn} / ${p.nameAr}</div>
+              <div class="text-[11px] text-stoneLux">Shape: ${p.shape} • Family: ${p.family}</div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-2">
+            <label class="flex items-center gap-1 bg-white px-2.5 py-1.5 rounded-xl border border-champagne/40">
+              <span>100ml Price:</span>
+              <input type="number" value="${p.basePrice}" onchange="adminUpdatePrice(${p.id}, this.value)" class="w-16 font-bold text-obsidian focus:outline-none">
+            </label>
+
+            <button onclick="adminToggleOffer(${p.id})" class="px-3 py-1.5 rounded-xl font-bold transition ${p.hasOffer ? 'bg-amber-200 text-amber-950 border border-amber-500' : 'bg-white text-stoneLux border border-gray-300'}">
+              ${p.hasOffer ? `🔥 Offer ON (-${p.discount}%)` : 'Offer OFF'}
+            </button>
+
+            <button onclick="adminDeletePerfume(${p.id})" class="px-2.5 py-1.5 rounded-xl bg-red-50 text-red-700 font-bold hover:bg-red-100">Delete</button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function adminUpdatePrice(id, val) {
+      const p = perfumesData.find(x => x.id === id);
+      if (p) {
+        p.basePrice = Number(val) || 1200;
+        saveCatalog();
+        handleSearchAndFilter();
+        setHeroSize(heroSelectedSize);
+        showToast("Price updated across all 6 sizes");
+      }
+    }
+
+    function adminToggleOffer(id) {
+      const p = perfumesData.find(x => x.id === id);
+      if (p) {
+        p.hasOffer = !p.hasOffer;
+        if (p.hasOffer && !p.discount) p.discount = 20;
+        saveCatalog();
+        renderAdminCatalog();
+        handleSearchAndFilter();
+        showToast(p.hasOffer ? `Special offer enabled on ${p.nameEn}` : `Offer removed from ${p.nameEn}`);
+      }
+    }
+
+    function adminDeletePerfume(id) {
+      if (perfumesData.length <= 1) return;
+      perfumesData = perfumesData.filter(x => x.id !== id);
+      saveCatalog();
+      renderAdminCatalog();
+      handleSearchAndFilter();
+    }
+
+    function adminAddNewPerfume(e) {
+      e.preventDefault();
+      const notesEn = document.getElementById('new-notes-en').value.trim();
+      const notesAr = document.getElementById('new-notes-ar').value.trim();
+      const hasOffer = document.getElementById('new-has-offer').checked;
+      const discount = Number(document.getElementById('new-discount').value) || 20;
+
+      const newP = {
+        id: Date.now(),
+        nameEn: document.getElementById('new-name-en').value.trim(),
+        nameAr: document.getElementById('new-name-ar').value.trim(),
+        family: document.getElementById('new-family').value,
+        shape: document.getElementById('new-shape').value,
+        bestseller: true,
+        hasOffer,
+        discount: hasOffer ? discount : 0,
+        basePrice: Number(document.getElementById('new-price').value) || 1400,
+        rating: "5.0 (New)",
+        liquidColor: document.getElementById('new-liquid').value,
+        capColor: document.getElementById('new-cap').value,
+        notes: ["Oud", "Vanilla", "Bergamot", "Amber"],
+        topEn: notesEn,
+        topAr: notesAr,
+        heartEn: notesEn,
+        heartAr: notesAr,
+        baseEn: "Extrait 35% Signature Base",
+        baseAr: "قاعدة عطرية بتركيز 35%"
+      };
+
+      perfumesData.unshift(newP);
+      saveCatalog();
+      handleSearchAndFilter();
+      switchAdminTab('manage');
+      renderAdminCatalog();
+      showToast(`${newP.nameEn} added to catalog!`);
+    }
+
+    function saveBotConfig() {
+      botConfig.phone = document.getElementById('bot-phone-input').value.trim();
+      botConfig.header = document.getElementById('bot-header-input').value.trim();
+      localStorage.setItem('veloire_bot_v2', JSON.stringify(botConfig));
+      showToast("WhatsApp Bot settings saved");
+    }
+
+    function renderAdminOrders() {
+      const box = document.getElementById('admin-orders-list');
+      if (savedOrders.length === 0) {
+        box.innerHTML = `<div class="p-6 text-center bg-alabaster rounded-2xl text-stoneLux">No customer orders placed yet in this session.</div>`;
+        return;
+      }
+      box.innerHTML = savedOrders.map(o => `
+        <div class="p-4 rounded-2xl bg-alabaster border border-champagne/30 space-y-1">
+          <div class="flex justify-between font-bold text-obsidian">
+            <span>#${o.orderId} — ${o.name} (${o.phone})</span>
+            <span class="text-champagneDark">${o.total.toLocaleString()} EGP</span>
+          </div>
+          <div class="text-stoneLux">${o.city} — ${o.address} • ${o.payMethod}</div>
+          <div class="text-[11px] whitespace-pre-line text-charcoal pt-1">${o.items}</div>
+        </div>
+      `).join('');
+    }
+
+    function resetCatalogToDefault() {
+      localStorage.removeItem('veloire_catalog_v2');
+      perfumesData = JSON.parse(JSON.stringify(defaultPerfumes));
+      renderAdminCatalog();
+      handleSearchAndFilter();
+      setHeroSize(100);
+      showToast("Default 16 luxury creations restored");
+    }
+
+    // 10. INTERACTIVE 3-STEP SCENT QUIZ
+    function openQuizModal() {
+      renderQuizStep(1);
+      document.getElementById('quiz-modal').classList.remove('opacity-0', 'pointer-events-none');
+    }
+    function closeQuizModal() {
+      document.getElementById('quiz-modal').classList.add('opacity-0', 'pointer-events-none');
+    }
+    function renderQuizStep(step, fam = 'woody') {
+      const body = document.getElementById('quiz-body');
+      if (step === 1) {
+        body.innerHTML = `
+          <p class="text-xs font-bold uppercase tracking-wider text-stoneLux">Step 1 of 2 • Choose Your Aura</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <button onclick="renderQuizStep(2, 'woody')" class="p-4 rounded-2xl border border-champagne/40 bg-alabaster hover:border-obsidian text-start transition">
+              <div class="font-serifLux text-xl font-bold">🪵 Royal & Mysterious</div>
+              <div class="text-xs text-stoneLux">White Oud, Suede Leather, Sandalwood</div>
+            </button>
+            <button onclick="renderQuizStep(2, 'amber')" class="p-4 rounded-2xl border border-champagne/40 bg-alabaster hover:border-obsidian text-start transition">
+              <div class="font-serifLux text-xl font-bold">🔥 Warm & Seductive</div>
+              <div class="text-xs text-stoneLux">Madagascar Vanilla, Golden Amber, Cognac</div>
+            </button>
+            <button onclick="renderQuizStep(2, 'fresh')" class="p-4 rounded-2xl border border-champagne/40 bg-alabaster hover:border-obsidian text-start transition">
+              <div class="font-serifLux text-xl font-bold">🍋 Crisp & Mediterranean</div>
+              <div class="text-xs text-stoneLux">Calabrian Bergamot, Neroli, Sea Amber</div>
+            </button>
+            <button onclick="renderQuizStep(2, 'floral')" class="p-4 rounded-2xl border border-champagne/40 bg-alabaster hover:border-obsidian text-start transition">
+              <div class="font-serifLux text-xl font-bold">☁️ Velvety & Pure</div>
+              <div class="text-xs text-stoneLux">Damask Rose, Cashmere Musk, Iris</div>
+            </button>
+          </div>
+        `;
+      } else {
+        const matches = perfumesData.filter(p => p.family === fam).slice(0, 2);
+        body.innerHTML = `
+          <p class="text-xs font-bold uppercase tracking-wider text-emerald-700">✓ Your Bespoke Olfactory Match</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            ${matches.map(m => `
+              <div class="p-4 rounded-2xl bg-alabaster border border-champagne/40 text-center space-y-2">
+                ${renderMorphingBottleSVG(m, 100, "w-24 h-32")}
+                <div class="font-serifLux text-xl font-bold">${m.nameEn}</div>
+                <button onclick="closeQuizModal(); openQuickView(${m.id});" class="w-full py-2 rounded-full bg-obsidian text-white text-xs font-bold uppercase">Explore Flacon</button>
+              </div>
+            `).join('')}
+          </div>
+        `;
+      }
+    }
+
+    // 11. CATEGORY, NOTE & BILINGUAL SWITCHERS
+    function setCategory(cat) {
+      activeCategory = cat;
+      document.querySelectorAll('.cat-tab').forEach(btn => {
+        if (btn.dataset.cat === cat) {
+          btn.className = "cat-tab px-5 py-2.5 rounded-full bg-obsidian text-white text-xs font-bold uppercase tracking-wider shrink-0 transition shadow";
+        } else {
+          btn.className = "cat-tab px-5 py-2.5 rounded-full bg-white border border-champagne/30 text-charcoal hover:border-obsidian text-xs font-bold uppercase tracking-wider shrink-0 transition";
+        }
+      });
+      handleSearchAndFilter();
+    }
+
+    function filterByNote(note) {
+      activeNote = note;
+      document.getElementById('catalog-section').scrollIntoView({ behavior: 'smooth' });
+      handleSearchAndFilter();
+    }
+
+    function clearSearchFilters() {
+      document.getElementById('live-search-input').value = '';
+      activeNote = '';
+      setCategory('all');
+    }
+
+    function toggleLanguage() {
+      currentLang = currentLang === 'en' ? 'ar' : 'en';
+      document.documentElement.lang = currentLang;
+      document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+      document.getElementById('lang-btn-label').innerText = currentLang === 'en' ? 'العربية' : 'English';
+      setHeroSize(heroSelectedSize);
+      handleSearchAndFilter();
+      updateCartUI();
+    }
+
+    function startMarketingTimers() {
+      let saleSec = 47 * 3600 + 54 * 60 + 19;
+      let shipSec = 9 * 3600 + 38 * 60 + 44;
+      setInterval(() => {
+        if (saleSec > 0) saleSec--;
+        if (shipSec > 0) shipSec--;
+        document.getElementById('sale-hr').innerText = String(Math.floor(saleSec / 3600)).padStart(2, '0');
+        document.getElementById('sale-min').innerText = String(Math.floor((saleSec % 3600) / 60)).padStart(2, '0');
+        document.getElementById('sale-sec').innerText = String(saleSec % 60).padStart(2, '0');
+        document.getElementById('ship-hr').innerText = String(Math.floor(shipSec / 3600)).padStart(2, '0');
+        document.getElementById('ship-min').innerText = String(Math.floor((shipSec % 3600) / 60)).padStart(2, '0');
+        document.getElementById('ship-sec').innerText = String(shipSec % 60).padStart(2, '0');
+      }, 1000);
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('lux-toast');
+      document.getElementById('lux-toast-msg').innerText = msg;
+      toast.classList.remove('opacity-0', 'pointer-events-none');
+      setTimeout(() => toast.classList.add('opacity-0', 'pointer-events-none'), 2600);
+    }
+
+    window.onload = function() {
+      setHeroSize(100);
+      handleSearchAndFilter();
+      startMarketingTimers();
+      if (perfumesData[0] && perfumesData[1]) {
+        document.getElementById('bundle-visual-1').innerHTML = renderMorphingBottleSVG(perfumesData[0], 100, "w-24 h-36");
+        document.getElementById('bundle-visual-2').innerHTML = renderMorphingBottleSVG(perfumesData[1], 100, "w-24 h-36");
+      }
+    };
+  </script>
+</body>
+</html>
